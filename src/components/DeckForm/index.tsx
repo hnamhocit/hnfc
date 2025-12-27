@@ -103,8 +103,8 @@ export function DeckForm({ deckId }: { deckId?: string }) {
 	return (
 		<Card className='rounded-2xl'>
 			<CardHeader>
-				<div className='flex items-start justify-between gap-3'>
-					<div className='flex items-center gap-4'>
+				<div className='flex items-start justify-between gap-4 flex-wrap'>
+					<div className='flex items-center gap-4 flex-wrap'>
 						<Link
 							href='/dashboard'
 							className='block p-2 border shadow rounded-lg hover:bg-slate-100 transition'>

@@ -1,5 +1,5 @@
 import { PlusIcon, TagIcon, XIcon } from 'lucide-react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -13,6 +13,7 @@ interface TagsProps {
 
 export default function Tags({ tags, setTags }: TagsProps) {
 	const [tagInput, setTagInput] = useState('')
+	const inputRef = useRef<HTMLInputElement>(null)
 
 	function clampTag(raw: string) {
 		return raw.trim().replace(/\s+/g, ' ').replace(/,$/, '').slice(0, 40)
@@ -26,6 +27,9 @@ export default function Tags({ tags, setTags }: TagsProps) {
 		) {
 			setTags([...tags, newTag])
 			setTagInput('')
+			if (inputRef.current) {
+				inputRef.current.focus()
+			}
 		}
 	}
 
@@ -69,6 +73,7 @@ export default function Tags({ tags, setTags }: TagsProps) {
 
 				<div className='flex gap-2'>
 					<Input
+						ref={inputRef}
 						value={tagInput}
 						onChange={(e) => {
 							setTagInput(e.target.value)
