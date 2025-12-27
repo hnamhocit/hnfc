@@ -1,17 +1,24 @@
 'use client'
 
+import { usePathname, useRouter } from 'next/navigation'
+import { ReactNode, useEffect } from 'react'
+
 import { useUserStore } from '@/stores'
-import { useRouter } from 'next/navigation'
-import { ReactNode } from 'react'
 
 export default function ProtectedLayout({ children }: { children: ReactNode }) {
-	const { user } = useUserStore()
+	const { user, isLoading } = useUserStore()
 	const router = useRouter()
+	const pathname = usePathname()
 
-	if (!user) {
-		router.push('/enter')
-		return null
-	}
+	useEffect(() => {
+		if (!isLoading && !user) {
+			router.replace(`/enter`)
+		}
+	}, [isLoading, user, router, pathname])
+
+	if (isLoading) return null
+
+	if (!user) return null
 
 	return children
 }

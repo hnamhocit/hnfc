@@ -59,6 +59,7 @@ export default function EnterPage() {
 									/>
 								</div>
 							</Link>
+
 							<div>
 								<h2 className='text-2xl font-bold text-foreground'>
 									hnfc
@@ -118,6 +119,11 @@ export default function EnterPage() {
 						</CardHeader>
 
 						<CardContent className='p-8 pt-6'>
+							<Providers
+								disabled={disabled}
+								setDisabled={setDisabled}
+							/>
+
 							<Tabs
 								value={mode}
 								onValueChange={(v) => setMode(v as Mode)}
@@ -136,11 +142,6 @@ export default function EnterPage() {
 										Create Account
 									</TabsTrigger>
 								</TabsList>
-
-								<Providers
-									disabled={disabled}
-									setDisabled={setDisabled}
-								/>
 
 								<TabsContent
 									value='signin'

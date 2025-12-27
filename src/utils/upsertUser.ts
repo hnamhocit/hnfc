@@ -1,13 +1,15 @@
+import type { User as FirebaseUser } from 'firebase/auth'
+import { Timestamp } from 'firebase/firestore'
+
 import { db, doc, getDoc, setDoc } from '@/config'
 import { IUser } from '@/interfaces'
-import type { User as FirebaseUser } from 'firebase/auth'
 
 export async function upsertUser(user: FirebaseUser, extra?: Partial<IUser>) {
 	if (!user?.uid) throw new Error('Missing user.uid')
 
 	const ref = doc(db, 'users', user.uid)
 	const snap = await getDoc(ref)
-	const now = Date.now()
+	const now = Timestamp.now()
 
 	if (snap.exists()) {
 		await setDoc(

@@ -1,9 +1,11 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+	--font-sans: var(--geist-font), sans-serif;
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
@@ -41,91 +43,114 @@
 	--color-sidebar-ring: var(--sidebar-ring);
 }
 
-:root {
-	--radius: 0.625rem;
+@layer base {
+	:root {
+		/* Giữ nguyên radius của bạn */
+		--radius: 0.625rem;
 
-	/* --- Light Mode --- */
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
+		/* --- Light Mode (Nền trắng, Tím chủ đạo) --- */
+		--background: oklch(1 0 0);
+		--foreground: oklch(0.145 0 0);
 
-	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.145 0 0);
+		--card: oklch(1 0 0);
+		--card-foreground: oklch(0.145 0 0);
 
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.145 0 0);
+		--popover: oklch(1 0 0);
+		--popover-foreground: oklch(0.145 0 0);
 
-	/* PRIMARY: Màu tím logo (#7828c8) */
-	--primary: oklch(0.48 0.23 290);
-	--primary-foreground: oklch(1 0 0); /* Chữ trắng trên nền tím */
+		/* PRIMARY: Màu tím đậm (#7c3aed) */
+		--primary: oklch(0.5 0.23 290);
+		--primary-foreground: oklch(0.985 0 0);
 
-	--secondary: oklch(0.97 0 0);
-	--secondary-foreground: oklch(0.48 0.23 290); /* Tím đậm cho text phụ */
+		/* Secondary: Tím rất nhạt */
+		--secondary: oklch(0.96 0.03 290);
+		--secondary-foreground: oklch(0.5 0.23 290);
 
-	--muted: oklch(0.97 0 0);
-	--muted-foreground: oklch(0.556 0 0);
+		--muted: oklch(0.96 0.03 290);
+		--muted-foreground: oklch(0.556 0 0);
 
-	--accent: oklch(0.96 0.02 290); /* Tím rất nhạt cho hover */
-	--accent-foreground: oklch(0.48 0.23 290);
+		--accent: oklch(0.96 0.03 290);
+		--accent-foreground: oklch(0.5 0.23 290);
 
-	--destructive: oklch(0.577 0.245 27.325);
-	--border: oklch(0.922 0 0);
-	--input: oklch(0.922 0 0);
+		--destructive: oklch(0.577 0.245 27.325);
 
-	/* Ring focus cùng màu tím */
-	--ring: oklch(0.48 0.23 290);
+		--border: oklch(0.922 0 0);
+		--input: oklch(0.922 0 0);
 
-	/* Sidebar variables */
-	--sidebar: oklch(0.985 0 0);
-	--sidebar-foreground: oklch(0.145 0 0);
-	--sidebar-primary: oklch(0.48 0.23 290);
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.97 0 0);
-	--sidebar-accent-foreground: oklch(0.205 0 0);
-	--sidebar-border: oklch(0.922 0 0);
-	--sidebar-ring: oklch(0.48 0.23 290);
+		/* Ring khi focus cùng màu Primary */
+		--ring: oklch(0.5 0.23 290);
 
-	/* --- HeroUI Overrides (Nếu vẫn dùng component HeroUI) --- */
-	--heroui-primary: var(--primary);
-	--heroui-primary-foreground: var(--primary-foreground);
-}
+		/* Chart giữ nguyên hoặc chỉnh theo tone nếu cần */
+		--chart-1: oklch(0.5 0.23 290);
+		--chart-2: oklch(0.6 0.118 184.704);
+		--chart-3: oklch(0.398 0.07 227.392);
+		--chart-4: oklch(0.828 0.189 84.429);
+		--chart-5: oklch(0.769 0.188 70.08);
 
-.dark {
-	/* --- Dark Mode --- */
-	--background: oklch(0.1 0.05 290); /* Nền tối pha chút tím rất nhẹ */
-	--foreground: oklch(0.985 0 0);
+		/* Sidebar Light */
+		--sidebar: oklch(0.985 0 0);
+		--sidebar-foreground: oklch(0.145 0 0);
+		--sidebar-primary: oklch(0.5 0.23 290);
+		--sidebar-primary-foreground: oklch(0.985 0 0);
+		--sidebar-accent: oklch(0.96 0.03 290);
+		--sidebar-accent-foreground: oklch(0.5 0.23 290);
+		--sidebar-border: oklch(0.922 0 0);
+		--sidebar-ring: oklch(0.5 0.23 290);
+	}
 
-	--card: oklch(0.15 0.05 290);
-	--card-foreground: oklch(0.985 0 0);
+	.dark {
+		/* --- Dark Mode (Nền tím than tối) --- */
+		/* Mình chỉnh nền tối nhưng có chút sắc tím (hue 290) để mượt hơn */
+		--background: oklch(0.12 0.03 290);
+		--foreground: oklch(0.985 0 0);
 
-	--popover: oklch(0.15 0.05 290);
-	--popover-foreground: oklch(0.985 0 0);
+		/* Card sáng hơn nền một chút để tạo khối */
+		--card: oklch(0.17 0.04 290);
+		--card-foreground: oklch(0.985 0 0);
 
-	/* PRIMARY Dark: Tím sáng hơn một chút để nổi trên nền đen (#9353d3) */
-	--primary: oklch(0.6 0.23 290);
-	--primary-foreground: oklch(1 0 0);
+		--popover: oklch(0.17 0.04 290);
+		--popover-foreground: oklch(0.985 0 0);
 
-	--secondary: oklch(0.269 0 0);
-	--secondary-foreground: oklch(0.985 0 0);
+		/* PRIMARY Dark: Tím sáng hơn để nổi bật trên nền tối (#9333ea) */
+		--primary: oklch(0.65 0.25 290);
+		--primary-foreground: oklch(1 0 0); /* Chữ trắng trên nền tím */
 
-	--muted: oklch(0.269 0 0);
-	--muted-foreground: oklch(0.708 0 0);
+		--secondary: oklch(0.25 0.05 290);
+		--secondary-foreground: oklch(0.985 0 0);
 
-	--accent: oklch(0.269 0 0);
-	--accent-foreground: oklch(0.985 0 0);
+		--muted: oklch(0.25 0.05 290);
+		--muted-foreground: oklch(0.708 0 0);
 
-	--destructive: oklch(0.704 0.191 22.216);
-	--border: oklch(1 0 0 / 10%);
-	--input: oklch(1 0 0 / 15%);
-	--ring: oklch(0.6 0.23 290);
+		--accent: oklch(0.25 0.05 290);
+		--accent-foreground: oklch(0.985 0 0);
 
-	--sidebar: oklch(0.205 0 0);
-	--sidebar-foreground: oklch(0.985 0 0);
-	--sidebar-primary: oklch(0.6 0.23 290);
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.269 0 0);
-	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: oklch(1 0 0 / 10%);
-	--sidebar-ring: oklch(0.6 0.23 290);
+		--destructive: oklch(0.6 0.15 25);
+
+		/* --- FIX QUAN TRỌNG CHO OUTLINE BUTTON --- */
+		/* Mình để màu trắng với độ trong suốt 20% (thay vì 10% như cũ) */
+		/* Điều này giúp viền nút sáng hơn, dễ nhìn hơn */
+		--border: oklch(0.98 0 0 / 0.2);
+		--input: oklch(0.98 0 0 / 0.2);
+
+		--ring: oklch(0.65 0.25 290);
+
+		/* Chart Dark */
+		--chart-1: oklch(0.65 0.25 290);
+		--chart-2: oklch(0.696 0.17 162.48);
+		--chart-3: oklch(0.769 0.188 70.08);
+		--chart-4: oklch(0.627 0.265 303.9);
+		--chart-5: oklch(0.645 0.246 16.439);
+
+		/* Sidebar Dark */
+		--sidebar: oklch(0.15 0.04 290);
+		--sidebar-foreground: oklch(0.985 0 0);
+		--sidebar-primary: oklch(0.65 0.25 290);
+		--sidebar-primary-foreground: oklch(1 0 0);
+		--sidebar-accent: oklch(0.25 0.05 290);
+		--sidebar-accent-foreground: oklch(0.985 0 0);
+		--sidebar-border: oklch(0.98 0 0 / 0.2); /* Đồng bộ border sidebar */
+		--sidebar-ring: oklch(0.65 0.25 290);
+	}
 }
 
 @layer base {
@@ -133,6 +158,6 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground transition-colors;
 	}
 }
