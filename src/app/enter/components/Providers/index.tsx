@@ -1,3 +1,5 @@
+'use client'
+
 import { Dispatch, SetStateAction } from 'react'
 
 import { Separator } from '@/components/ui/separator'
@@ -17,21 +19,19 @@ interface ProvidersProps {
 }
 
 export default function Providers({ disabled, setDisabled }: ProvidersProps) {
+	const getProvider = (provider: 'github' | 'google' | 'facebook') => {
+		if (provider === 'github') return githubProvider
+		if (provider === 'google') return googleProvider
+		return facebookProvider
+	}
+
 	const signInWithProvider = async (
 		provider: 'github' | 'google' | 'facebook',
 	) => {
 		setDisabled(true)
 
 		try {
-			let _provider: any = null
-
-			if (provider === 'github') {
-				_provider = githubProvider
-			} else if (provider === 'google') {
-				_provider = googleProvider
-			} else {
-				_provider = facebookProvider
-			}
+			const _provider = getProvider(provider)
 
 			const { user } = await signInWithPopup(auth, _provider)
 			await upsertUser(user)
@@ -69,11 +69,9 @@ export default function Providers({ disabled, setDisabled }: ProvidersProps) {
 
 			<div className='flex items-center gap-4 mb-6'>
 				<Separator className='flex-1' />
-
 				<span className='text-xs font-medium text-muted-foreground uppercase'>
 					Or Email
 				</span>
-
 				<Separator className='flex-1' />
 			</div>
 		</>

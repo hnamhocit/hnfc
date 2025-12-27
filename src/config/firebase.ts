@@ -8,6 +8,7 @@ import {
 	onAuthStateChanged,
 	signInWithEmailAndPassword,
 	signInWithPopup,
+	signInWithRedirect,
 	signOut,
 	updateProfile,
 } from 'firebase/auth'
@@ -68,6 +69,7 @@ export {
 	setDoc,
 	signInWithEmailAndPassword,
 	signInWithPopup,
+	signInWithRedirect,
 	signOut,
 	startAfter,
 	Timestamp,
