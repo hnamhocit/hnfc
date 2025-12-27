@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useMemo, useState } from 'react'
 
 import { useDecks } from '@/hooks/useDecks'
+import WarningAlert from '../WarningAlert'
 import Empty from './Empty'
 import GridDeck from './GridDeck'
 import ListDeck from './ListDeck'
@@ -26,6 +27,8 @@ export default function Decks() {
 
 	return (
 		<div className='container mx-auto p-4 md:p-6'>
+			<WarningAlert />
+
 			<Toolbar
 				viewMode={viewMode}
 				setViewMode={setViewMode}

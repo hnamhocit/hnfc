@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation'
 import { ReactNode, useEffect } from 'react'
 
+import Header from '@/components/Header'
 import { useUserStore } from '@/stores'
 
 export default function ProtectedLayout({ children }: { children: ReactNode }) {
@@ -20,5 +21,10 @@ export default function ProtectedLayout({ children }: { children: ReactNode }) {
 
 	if (!user) return null
 
-	return children
+	return (
+		<>
+			<Header />
+			{children}
+		</>
+	)
 }

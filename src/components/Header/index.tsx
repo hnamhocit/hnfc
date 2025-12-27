@@ -1,9 +1,10 @@
-import { BellIcon } from 'lucide-react'
+import { BellIcon, ChevronLeftIcon } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { authService } from '@/services'
 import { useUserStore } from '@/stores'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { Button } from '../ui/button'
 import {
@@ -16,12 +17,21 @@ import ThemeButton from './ThemeButton'
 
 export default function Header() {
 	const { user } = useUserStore()
+	const router = useRouter()
+	const pathname = usePathname()
 
 	return (
-		<header className='sticky top-0 left-0 w-full bg-white dark:bg-neutral-900 transition-colors z-20 h-16 shadow'>
+		<header className='sticky top-0 left-0 w-full z-20 h-16 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60'>
 			<div className='flex items-center justify-between h-full container mx-auto px-4 md:px-6'>
 				<div className='flex items-center gap-3'>
-					<Link href='/dashboard'>
+					{pathname !== '/dashboard' ? (
+						<Button
+							size='icon'
+							variant='outline'
+							onClick={() => router.back()}>
+							<ChevronLeftIcon size={24} />
+						</Button>
+					) : (
 						<Image
 							src='/logo.png'
 							alt='Logo'
@@ -29,9 +39,13 @@ export default function Header() {
 							height={40}
 							className='rounded-full'
 						/>
-					</Link>
+					)}
 
-					<h1 className='text-2xl font-bold text-primary'>hnfc</h1>
+					<Link
+						href='/dashboard'
+						className='text-2xl font-bold text-primary'>
+						hnfc
+					</Link>
 				</div>
 
 				<div className='flex items-center gap-4'>
@@ -58,8 +72,16 @@ export default function Header() {
 						</DropdownMenuTrigger>
 
 						<DropdownMenuContent>
-							<DropdownMenuItem>Profile</DropdownMenuItem>
-							<DropdownMenuItem>Settings</DropdownMenuItem>
+							<DropdownMenuItem
+								onClick={() => router.push('/me/profile')}>
+								Profile
+							</DropdownMenuItem>
+
+							<DropdownMenuItem
+								onClick={() => router.push('/me/settings')}>
+								Settings
+							</DropdownMenuItem>
+
 							<DropdownMenuItem
 								variant='destructive'
 								onClick={authService.logout}>

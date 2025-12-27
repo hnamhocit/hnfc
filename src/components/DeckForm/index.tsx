@@ -1,7 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { ChevronLeftIcon, Trash2 } from 'lucide-react'
+import { Trash2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
@@ -15,7 +15,6 @@ import {
 } from '@/components/ui/card'
 import { DeckInput, deckSchema } from '@/schemas'
 import { deckService } from '@/services'
-import Link from 'next/link'
 import ColorPicker from './ColorPicker'
 import Description from './Description'
 import Tags from './Tags'
@@ -105,18 +104,12 @@ export function DeckForm({ deckId }: { deckId?: string }) {
 			<CardHeader>
 				<div className='flex items-start justify-between gap-4 flex-wrap'>
 					<div className='flex items-center gap-4 flex-wrap'>
-						<Link
-							href='/dashboard'
-							className='block p-2 border shadow rounded-lg hover:bg-slate-100 transition'>
-							<ChevronLeftIcon />
-						</Link>
-
 						<div>
 							<CardTitle className='text-2xl'>
 								{isEdit ? 'Edit deck' : 'Create a deck'}
 							</CardTitle>
 
-							<CardDescription className='text-lg'>
+							<CardDescription className='md:text-lg'>
 								{isEdit
 									? `Editing deck: ${deckId}`
 									: 'Write like a blog: borderless title + live markdown description.'}
