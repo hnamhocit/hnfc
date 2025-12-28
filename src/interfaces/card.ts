@@ -1,3 +1,4 @@
+import { Timestamp } from 'firebase/firestore'
 import { IDocument } from './document'
 
 export type CardType = 'forward' | 'reverse' | 'typing' | 'cloze'
@@ -9,8 +10,8 @@ export interface FsrsState {
 	state: CardState
 	difficulty: number
 	stability: number
-	dueAt: string
-	lastReviewAt?: string
+	dueAt: Timestamp
+	lastReviewAt?: Timestamp
 	reps: number
 	lapses: number
 }

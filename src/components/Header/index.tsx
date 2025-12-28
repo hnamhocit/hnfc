@@ -1,10 +1,11 @@
-import { BellIcon, ChevronLeftIcon } from 'lucide-react'
+import { BellIcon } from 'lucide-react'
 import Image from 'next/image'
 
 import { authService } from '@/services'
 import { useUserStore } from '@/stores'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import BackButton from '../BackButton'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { Button } from '../ui/button'
 import {
@@ -25,12 +26,7 @@ export default function Header() {
 			<div className='flex items-center justify-between h-full container mx-auto px-4 md:px-6'>
 				<div className='flex items-center gap-3'>
 					{pathname !== '/dashboard' ? (
-						<Button
-							size='icon'
-							variant='outline'
-							onClick={() => router.back()}>
-							<ChevronLeftIcon size={24} />
-						</Button>
+						<BackButton />
 					) : (
 						<Image
 							src='/logo.png'
