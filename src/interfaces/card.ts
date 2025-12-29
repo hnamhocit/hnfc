@@ -1,8 +1,6 @@
 import { Timestamp } from 'firebase/firestore'
 import { IDocument } from './document'
 
-export type CardType = 'forward' | 'reverse' | 'typing' | 'cloze'
-
 export type FsrsRating = 1 | 2 | 3 | 4
 export type CardState = 'new' | 'learning' | 'review' | 'relearning'
 
@@ -11,15 +9,14 @@ export interface FsrsState {
 	difficulty: number
 	stability: number
 	dueAt: Timestamp
-	lastReviewAt?: Timestamp
+	lastReviewAt: Timestamp | null
 	reps: number
 	lapses: number
 }
 
 export interface ICard extends IDocument {
+	ownerId: string
 	deckId: string
-
-	type: CardType
 
 	front: string
 	back: string

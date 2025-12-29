@@ -7,7 +7,6 @@ import {
 	doc,
 	getDoc,
 	getDocs,
-	limit,
 	orderBy,
 	query,
 	setDoc,
@@ -72,21 +71,16 @@ export const deckService = {
 		await deleteDoc(ref)
 	},
 
-	async listDue(options?: { limit?: number }): Promise<ICard[]> {
-		const uid = getIdOrThrow()
-		const now = Timestamp.now()
-		const pageSize = options?.limit ?? 20
-
+	async findMany() {
+		const id = getIdOrThrow()
 		const q = query(
-			collection(db, 'cards'),
-			where('ownerId', '==', uid),
-			where('srs.dueAt', '<=', now),
-			orderBy('srs.dueAt', 'asc'),
-			limit(pageSize),
+			collection(db, 'decks'),
+			where('ownerId', '==', id),
+			orderBy('createdAt', 'desc'),
 		)
 
 		const snap = await getDocs(q)
-		return snap.docs.map((doc) => doc.data() as ICard)
+		return snap.docs.map((doc) => doc.data() as IDeck)
 	},
 
 	async getDecksWithStats(decks: IDeck[]): Promise<IDeckWithStats[]> {
@@ -94,6 +88,7 @@ export const deckService = {
 
 		const deckIds = decks.map((d) => d.id)
 		const now = Timestamp.now()
+		const id = getIdOrThrow()
 
 		const statsByDeckId: Record<string, IDeckStats> = Object.fromEntries(
 			deckIds.map((id) => [
@@ -104,7 +99,11 @@ export const deckService = {
 
 		// batch query cards by deckId (Firestore "in" max 10)
 		for (const ids of chunk(deckIds, 10)) {
-			const q = query(collection(db, 'cards'), where('deckId', 'in', ids))
+			const q = query(
+				collection(db, 'cards'),
+				where('ownerId', '==', id),
+				where('deckId', 'in', ids),
+			)
 			const snap = await getDocs(q)
 
 			snap.forEach((doc) => {

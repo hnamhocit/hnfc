@@ -17,6 +17,7 @@ export default function DeleteAccountPage() {
 					<h1 className='text-3xl font-bold text-foreground'>
 						User Data Deletion
 					</h1>
+
 					<p className='mt-2 text-muted-foreground'>
 						Request permanent deletion of your account and
 						associated data.
@@ -29,6 +30,7 @@ export default function DeleteAccountPage() {
 						<h2 className='text-xl font-semibold text-primary'>
 							Deletion Request Options
 						</h2>
+
 						<p className='text-muted-foreground'>
 							You can request account and data deletion using one
 							of the options below.
@@ -39,22 +41,27 @@ export default function DeleteAccountPage() {
 								<div className='font-semibold text-foreground'>
 									Option 1: Email
 								</div>
+
 								<p className='text-sm text-muted-foreground'>
 									Send an email with your sign-in email
 									address.
 								</p>
+
 								<div className='text-sm'>
 									<div className='text-muted-foreground'>
 										To
 									</div>
+
 									<div className='font-medium text-foreground'>
 										hnamhocit@gmail.com
 									</div>
 								</div>
+
 								<div className='text-sm'>
 									<div className='text-muted-foreground'>
 										Subject
 									</div>
+
 									<div className='font-medium text-foreground'>
 										User Data Deletion Request
 									</div>
@@ -73,6 +80,7 @@ export default function DeleteAccountPage() {
 								<div className='font-semibold text-foreground'>
 									Option 2: In-app
 								</div>
+
 								<p className='text-sm text-muted-foreground'>
 									If available, you can also request deletion
 									from your Settings page.
@@ -99,6 +107,7 @@ export default function DeleteAccountPage() {
 						<h2 className='text-xl font-semibold text-primary'>
 							Data That Will Be Deleted
 						</h2>
+
 						<ul className='list-disc pl-6 text-muted-foreground'>
 							<li>Your user profile and account metadata</li>
 							<li>Decks, cards/notes, and study progress</li>
@@ -112,6 +121,7 @@ export default function DeleteAccountPage() {
 						<h2 className='text-xl font-semibold text-primary'>
 							Verification & Processing Time
 						</h2>
+
 						<p className='text-muted-foreground'>
 							For security, we may ask you to verify ownership of
 							the account. Requests are processed within{' '}
@@ -123,12 +133,14 @@ export default function DeleteAccountPage() {
 						<h2 className='text-xl font-semibold text-primary'>
 							Related Links
 						</h2>
+
 						<div className='flex flex-col sm:flex-row gap-3'>
 							<Button
 								variant='secondary'
 								asChild>
 								<Link href='/privacy'>View Privacy Policy</Link>
 							</Button>
+
 							<Button asChild>
 								<Link href='/dashboard'>Back to Home</Link>
 							</Button>
@@ -140,12 +152,14 @@ export default function DeleteAccountPage() {
 							This page is provided to comply with Facebook (Meta)
 							data protection requirements.
 						</div>
+
 						<div className='flex gap-3 text-sm'>
 							<Link
 								className='text-primary hover:underline'
 								href='/privacy'>
 								Privacy
 							</Link>
+
 							<Link
 								className='text-primary hover:underline'
 								href='/dashboard'>

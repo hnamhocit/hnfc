@@ -1,2 +1,3 @@
-export * from './auth'
-export * from './deck'
+export * from './auth.schema'
+export * from './card.schema'
+export * from './deck.schema'

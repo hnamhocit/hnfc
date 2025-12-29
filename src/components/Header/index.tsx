@@ -24,23 +24,31 @@ export default function Header() {
 	return (
 		<header className='sticky top-0 left-0 w-full z-20 h-16 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60'>
 			<div className='flex items-center justify-between h-full container mx-auto px-4 md:px-6'>
-				<div className='flex items-center gap-3'>
-					{pathname !== '/dashboard' ? (
-						<BackButton />
-					) : (
-						<Image
-							src='/logo.png'
-							alt='Logo'
-							width={40}
-							height={40}
-							className='rounded-full'
-						/>
-					)}
+				<div className='flex items-center gap-7'>
+					<div className='flex items-center gap-2'>
+						{pathname !== '/dashboard' ? (
+							<BackButton />
+						) : (
+							<Image
+								src='/logo.png'
+								alt='Logo'
+								width={40}
+								height={40}
+								className='rounded-full'
+							/>
+						)}
+
+						<Link
+							href='/dashboard'
+							className='text-2xl font-bold text-primary'>
+							hnfc
+						</Link>
+					</div>
 
 					<Link
-						href='/dashboard'
-						className='text-2xl font-bold text-primary'>
-						hnfc
+						href='/add'
+						className='block p-2 border rounded-lg text-neutral-500'>
+						Add
 					</Link>
 				</div>
 

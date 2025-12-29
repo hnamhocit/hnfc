@@ -29,6 +29,7 @@ import {
 	Timestamp,
 	updateDoc,
 	where,
+	writeBatch,
 	type QueryConstraint,
 	type QueryDocumentSnapshot,
 } from 'firebase/firestore'
@@ -76,6 +77,7 @@ export {
 	updateDoc,
 	updateProfile,
 	where,
+	writeBatch,
 	type DocumentData,
 	type QueryConstraint,
 	type QueryDocumentSnapshot,
