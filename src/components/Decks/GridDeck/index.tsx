@@ -59,7 +59,9 @@ export default function GridDeck({
 					</div>
 				</div>
 
-				<Link href={`/decks/${id}/study`}>
+				<Link
+					href={`/decks/${id}/study`}
+					className='block w-full'>
 					<motion.button
 						whileTap={{ scale: 0.95 }}
 						whileHover={{ scale: 1.02 }}
