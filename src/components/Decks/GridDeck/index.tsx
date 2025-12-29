@@ -65,7 +65,7 @@ export default function GridDeck({
 					<motion.button
 						whileTap={{ scale: 0.95 }}
 						whileHover={{ scale: 1.02 }}
-						className='flex items-center gap-3 justify-center py-2 px-3 rounded-md shadow text-white font-medium'
+						className='flex items-center gap-3 justify-center py-2 px-3 rounded-md shadow text-white font-medium w-full'
 						style={{ backgroundColor: color }}>
 						<PlayCircleIcon size={18} />
 						Study Now
