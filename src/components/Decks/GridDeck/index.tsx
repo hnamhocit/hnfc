@@ -59,14 +59,16 @@ export default function GridDeck({
 					</div>
 				</div>
 
-				<motion.button
-					whileTap={{ scale: 0.95 }}
-					whileHover={{ scale: 1.02 }}
-					className='flex items-center gap-3 justify-center py-2 px-3 rounded-md shadow text-white font-medium'
-					style={{ backgroundColor: color }}>
-					<PlayCircleIcon size={18} />
-					Study Now
-				</motion.button>
+				<Link href={`/decks/${id}/study`}>
+					<motion.button
+						whileTap={{ scale: 0.95 }}
+						whileHover={{ scale: 1.02 }}
+						className='flex items-center gap-3 justify-center py-2 px-3 rounded-md shadow text-white font-medium'
+						style={{ backgroundColor: color }}>
+						<PlayCircleIcon size={18} />
+						Study Now
+					</motion.button>
+				</Link>
 			</div>
 		</div>
 	)

@@ -143,7 +143,7 @@ export default function DeckDetailPage() {
 						</Button>
 					</Link>
 
-					<Link href={`/study?deckId=${deck.id}`}>
+					<Link href={`/decks/${deck.id}/study`}>
 						<Button>
 							<PlayCircleIcon />
 							Study

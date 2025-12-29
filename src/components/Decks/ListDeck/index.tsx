@@ -67,9 +67,13 @@ export default function ListDeck({
 			</td>
 
 			<td className='py-4 px-6 text-right'>
-				<button className='text-indigo-600 hover:text-indigo-800 font-medium text-sm mr-4 opacity-0 group-hover:opacity-100 transition-opacity'>
-					Study
-				</button>
+				<Link href={`/decks/${id}/study`}>
+					<button
+						type='button'
+						className='text-indigo-600 hover:text-indigo-800 font-medium text-sm mr-4 opacity-0 group-hover:opacity-100 transition-opacity'>
+						Study
+					</button>
+				</Link>
 
 				<MoreMenu id={id} />
 			</td>
