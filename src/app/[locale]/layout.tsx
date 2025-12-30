@@ -30,7 +30,7 @@ export default async function RootLayout({
 	params,
 }: Readonly<{
 	children: ReactNode
-	params: Promise<{ locale: ILocale }>
+	params: Promise<{ locale: string }>
 }>) {
 	const { locale } = await params
 
@@ -38,12 +38,14 @@ export default async function RootLayout({
 		notFound()
 	}
 
+	const typedLocale = locale as ILocale
+
 	return (
 		<html>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<NextIntlClientProvider>
-					<Providers locale={locale}>{children}</Providers>
+					<Providers locale={typedLocale}>{children}</Providers>
 				</NextIntlClientProvider>
 			</body>
 		</html>

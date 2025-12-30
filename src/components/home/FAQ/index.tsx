@@ -22,12 +22,12 @@ export default function FAQ() {
 
 					<p className='text-lg text-muted-foreground mb-8'>
 						{t.rich('subtitle', {
-							supportLink: (
+							supportLink: (chunks) => (
 								<a
 									key='supportLink'
 									href='mailto:support@hnfc.app'
-									className='text-primary hover:underline'>
-									{t('support')}
+									className='underline underline-offset-4'>
+									{chunks}
 								</a>
 							),
 						})}
