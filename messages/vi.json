@@ -1,0 +1,288 @@
+{
+	"home": {
+		"nav": {
+			"features": "Tính năng",
+			"howItWorks": "Cách hoạt động",
+			"useCases": "Trường hợp sử dụng",
+			"pricing": "Bảng giá",
+			"signIn": "Đăng nhập",
+			"getStarted": "Bắt đầu"
+		},
+
+		"hero": {
+			"badge": {
+				"minimal": "Tối giản",
+				"fastReviews": "Ôn tập nhanh",
+				"crossPlatform": "Đa nền tảng"
+			},
+			"title": {
+				"line1": "Học nhanh hơn với",
+				"line2": "thẻ ghi nhớ thông minh."
+			},
+			"description": "hnfc là ứng dụng đa nền tảng được thiết kế để tập trung. Tạo bộ thẻ ngay lập tức, ôn tập bằng phương pháp lặp lại ngắt quãng và xây dựng trí nhớ lâu dài — không bị xao nhãng.",
+			"cta": {
+				"primary": "Bắt đầu học miễn phí",
+				"secondary": "Xem tính năng"
+			},
+			"stats": {
+				"activeUsers": "người dùng hoạt động",
+				"cardsReviewed": "thẻ đã ôn tập",
+				"rating": "đánh giá"
+			},
+			"session": {
+				"header": {
+					"title": "Phiên học: C++ Nâng cao",
+					"live": "Trực tiếp"
+				},
+				"tag": {
+					"definition": "Định nghĩa"
+				},
+				"content": {
+					"question": "\"Alignment\" có nghĩa là gì trong struct C?",
+					"hint": "Gợi ý: Hãy nghĩ về chu kỳ CPU và bộ đệm bộ nhớ."
+				},
+				"meta": {
+					"spaceToFlip": "Nhấn Space để lật",
+					"rateShortcut": "Nhấn 1-4 để đánh giá"
+				},
+				"actions": {
+					"again": "Lặp lại (1 phút)",
+					"good": "Tốt (1 ngày)"
+				},
+				"streak": {
+					"days": "12 ngày",
+					"label": "Chuỗi học hiện tại"
+				}
+			}
+		},
+
+		"categories": {
+			"computerScience": "Khoa học máy tính",
+			"medical": "Y khoa",
+			"law": "Luật",
+			"languages": "Ngôn ngữ",
+			"history": "Lịch sử",
+			"geography": "Địa lý"
+		},
+
+		"features": {
+			"headline": {
+				"title": "Mọi thứ bạn cần để ",
+				"highlight": "làm chủ bất kỳ môn học nào.",
+				"description": "Những công cụ mạnh mẽ giúp bạn xây dựng thói quen học tập bền vững mà không gây áp lực.",
+				"cta": "Khám phá tất cả tính năng"
+			},
+			"items": {
+				"createFast": {
+					"title": "Tạo bộ thẻ nhanh chóng",
+					"description": "Xây dựng flashcard chỉ trong vài giây với trình soạn thảo gọn gàng và mặc định thông minh."
+				},
+				"studySmarter": {
+					"title": "Học thông minh hơn",
+					"description": "Luồng học dựa trên lặp lại ngắt quãng giúp ghi nhớ lâu hơn."
+				},
+				"crossPlatform": {
+					"title": "Đa nền tảng",
+					"description": "Sử dụng hnfc trên mọi thiết bị. Tiến trình của bạn luôn được đồng bộ."
+				},
+				"keyboardFriendly": {
+					"title": "Thân thiện với bàn phím",
+					"description": "Ôn tập nhanh bằng phím tắt để duy trì sự tập trung."
+				},
+				"tagsSearch": {
+					"title": "Thẻ & tìm kiếm",
+					"description": "Tổ chức bộ thẻ bằng tag và tìm kiếm ngay lập tức."
+				},
+				"progressTracking": {
+					"title": "Theo dõi tiến độ",
+					"description": "Xem chuỗi học, độ chính xác và khối lượng ôn tập trong nháy mắt."
+				}
+			}
+		},
+
+		"howItWorks": {
+			"title": "Cách hoạt động",
+			"subtitle": "Ba bước đơn giản để duy trì nhịp học mỗi ngày.",
+			"steps": {
+				"create": {
+					"title": "Tạo",
+					"description": "Thêm thẻ thủ công hoặc nhập từ CSV."
+				},
+				"review": {
+					"title": "Ôn tập",
+					"description": "Các phiên học ngắn mỗi ngày với ghi nhớ thông minh."
+				},
+				"master": {
+					"title": "Làm chủ",
+					"description": "Theo dõi tiến độ và cải thiện điểm yếu."
+				}
+			}
+		},
+
+		"useCases": {
+			"title": "Trường hợp sử dụng",
+			"subtitle": "Phù hợp với mọi kiểu người học.",
+			"items": {
+				"languages": {
+					"tag": "Ngôn ngữ",
+					"title": "Học ngoại ngữ",
+					"description": "Từ vựng, cụm từ và luyện phát âm."
+				},
+				"students": {
+					"tag": "Học sinh",
+					"title": "Luyện thi",
+					"description": "Định nghĩa, công thức và luyện ghi nhớ nhanh."
+				},
+				"career": {
+					"tag": "Sự nghiệp",
+					"title": "Công nghệ & phỏng vấn",
+					"description": "Kiến thức nền tảng, thiết kế hệ thống và câu hỏi thường gặp."
+				},
+				"pro": {
+					"tag": "Chuyên sâu",
+					"title": "Y khoa / Luật",
+					"description": "Khối lượng kiến thức lớn được chia nhỏ và ôn tập hiệu quả."
+				}
+			}
+		},
+
+		"testimonials": {
+			"title": "Được người học yêu thích",
+			"items": [
+				{
+					"quote": "Giao diện gọn gàng. Tôi có thể ôn tập mỗi ngày mà không bị quá tải.",
+					"name": "Minh T.",
+					"role": "Sinh viên"
+				},
+				{
+					"quote": "Phím tắt và các phiên học nhanh giúp tôi duy trì chuỗi học.",
+					"name": "Lan P.",
+					"role": "Người học ngôn ngữ"
+				},
+				{
+					"quote": "Rất phù hợp để chuẩn bị phỏng vấn. Bộ thẻ dễ sắp xếp.",
+					"name": "Huy N.",
+					"role": "Kỹ sư phần mềm"
+				}
+			]
+		},
+
+		"pricing": {
+			"title": "Bảng giá đơn giản, minh bạch.",
+			"subtitle": "Bắt đầu miễn phí, nâng cấp khi bạn cần thêm dung lượng hoặc chế độ offline.",
+			"plans": {
+				"free": {
+					"name": "Miễn phí",
+					"price": "$0",
+					"description": "Phù hợp cho người mới bắt đầu.",
+					"features": [
+						"Không giới hạn thẻ văn bản",
+						"Tối đa 5 bộ thẻ",
+						"Thống kê tiến độ cơ bản",
+						"Đồng bộ trên 2 thiết bị",
+						"Hỗ trợ cộng đồng"
+					],
+					"limitations": [
+						"Không hỗ trợ tải hình ảnh",
+						"Không có chế độ offline",
+						"Thống kê & heatmap giới hạn"
+					],
+					"cta": "Bắt đầu học"
+				},
+				"plus": {
+					"badge": "Phổ biến nhất",
+					"name": "Plus",
+					"price": "$4",
+					"description": "Gỡ bỏ giới hạn và mở khóa hỗ trợ media.",
+					"features": [
+						"Không giới hạn bộ thẻ & thẻ",
+						"Upload hình ảnh (500MB)",
+						"Chế độ học offline",
+						"Đồng bộ không giới hạn thiết bị",
+						"Heatmap & thống kê nâng cao",
+						"Trải nghiệm không quảng cáo"
+					],
+					"period": "/tháng",
+					"cta": "Nâng cấp Plus"
+				},
+				"pro": {
+					"name": "Pro",
+					"price": "$8",
+					"description": "Dành cho người dùng nâng cao với nhu cầu media lớn.",
+					"features": [
+						"Bao gồm mọi tính năng Plus",
+						"5GB lưu trữ media",
+						"Ghi âm / upload audio",
+						"Hỗ trợ email ưu tiên",
+						"Truy cập sớm tính năng beta",
+						"Xuất dữ liệu CSV/Anki"
+					],
+					"period": "/tháng",
+					"cta": "Nâng cấp Pro"
+				}
+			}
+		},
+
+		"faqs": {
+			"title": "Câu hỏi thường gặp",
+			"subtitle": "Không tìm thấy câu trả lời bạn cần? Hãy liên hệ với đội ngũ {supportLink} của chúng tôi.",
+			"support": "hỗ trợ khách hàng",
+			"items": [
+				{
+					"question": "Tại sao lại có gói trả phí?",
+					"answer": "hnfc sử dụng hạ tầng đám mây cao cấp (Firebase) để đảm bảo dữ liệu được đồng bộ ngay lập tức và an toàn trên mọi thiết bị. Các gói trả phí giúp chúng tôi chi trả chi phí máy chủ và lưu trữ, từ đó duy trì ứng dụng nhanh và ổn định mà không cần bán dữ liệu người dùng."
+				},
+				{
+					"question": "Gói Miễn phí có thật sự miễn phí mãi mãi không?",
+					"answer": "Có! Nếu bạn chỉ cần flashcard dạng văn bản và không cần tải lên hình ảnh dung lượng lớn, gói Miễn phí là đủ cho hầu hết sinh viên. Chúng tôi sẽ không bao giờ xoá dữ liệu của bạn chỉ vì bạn dùng gói Free."
+				},
+				{
+					"question": "Tôi có thể sử dụng khi không có internet không?",
+					"answer": "Chế độ offline có sẵn trong các gói Plus và Pro. Bạn có thể ôn tập ngay cả khi không có kết nối mạng, và mọi thay đổi sẽ tự động đồng bộ khi bạn trực tuyến trở lại."
+				},
+				{
+					"question": "Điều gì xảy ra với dữ liệu của tôi nếu tôi huỷ gói?",
+					"answer": "Dữ liệu luôn thuộc về bạn. Khi huỷ gói trả phí, tài khoản sẽ quay về giới hạn của gói Miễn phí. Bạn sẽ không mất các thẻ văn bản, nhưng có thể cần giải phóng bớt dung lượng nếu vượt quá giới hạn."
+				},
+				{
+					"question": "Có ưu đãi cho sinh viên không?",
+					"answer": "Có! Chúng tôi giảm 50% cho gói Plus dành cho sinh viên có email .edu hợp lệ. Sau khi đăng ký, hãy liên hệ bộ phận hỗ trợ để được áp dụng ưu đãi."
+				}
+			]
+		},
+
+		"cta": {
+			"title": "Bắt đầu chuỗi học của bạn ngay hôm nay.",
+			"description": "Tham gia cùng hàng nghìn học sinh và người đi làm học tập hiệu quả hơn. Miễn phí bắt đầu, không cần thẻ tín dụng.",
+			"button": "Tạo tài khoản miễn phí",
+			"note": "Bao gồm 30 ngày dùng thử tính năng Pro"
+		},
+
+		"footer": {
+			"description": "Ứng dụng flashcard thông minh cho người học nghiêm túc. Làm chủ mọi môn học một cách dễ dàng.",
+			"product": {
+				"title": "Sản phẩm",
+				"items": ["Tính năng", "Bảng giá", "Tải về", "Nhật ký cập nhật"]
+			},
+			"resources": {
+				"title": "Tài nguyên",
+				"items": [
+					"Blog",
+					"Cộng đồng",
+					"Trung tâm trợ giúp",
+					"Tài liệu API"
+				]
+			},
+			"newsletter": {
+				"title": "Nhận cập nhật",
+				"placeholder": "Nhập email của bạn",
+				"button": "Đăng ký"
+			},
+			"legal": {
+				"copyright": "© 2025 hnfc Inc. Bảo lưu mọi quyền.",
+				"privacy": "Chính sách bảo mật",
+				"terms": "Điều khoản sử dụng"
+			}
+		}
+	}
+}

@@ -1,0 +1,283 @@
+{
+	"home": {
+		"nav": {
+			"features": "Features",
+			"howItWorks": "How it works",
+			"useCases": "Use cases",
+			"pricing": "Pricing",
+			"signIn": "Sign in",
+			"getStarted": "Get started"
+		},
+
+		"hero": {
+			"badge": {
+				"minimal": "Minimal",
+				"fastReviews": "Fast reviews",
+				"crossPlatform": "Cross-platform"
+			},
+			"title": {
+				"line1": "Learn faster with",
+				"line2": "intelligent flashcards."
+			},
+			"description": "hnfc is a cross-platform app designed for focus. Create decks instantly, review with spaced repetition, and build lasting memory—without the clutter.",
+			"cta": {
+				"primary": "Start Learning Free",
+				"secondary": "See Features"
+			},
+			"stats": {
+				"activeUsers": "active users",
+				"cardsReviewed": "cards reviewed",
+				"rating": "rating"
+			},
+			"session": {
+				"header": {
+					"title": "Session: Advanced C++",
+					"live": "Live"
+				},
+				"tag": {
+					"definition": "Definition"
+				},
+				"content": {
+					"question": "What does \"alignment\" mean in C structs?",
+					"hint": "Hint: Think about CPU cycles and memory padding."
+				},
+				"meta": {
+					"spaceToFlip": "Space to flip",
+					"rateShortcut": "1-4 to rate"
+				},
+				"actions": {
+					"again": "Again (1m)",
+					"good": "Good (1d)"
+				},
+				"streak": {
+					"days": "12 Days",
+					"label": "Current Streak"
+				}
+			}
+		},
+
+		"categories": {
+			"computerScience": "Computer Science",
+			"medical": "Medical",
+			"law": "Law",
+			"languages": "Languages",
+			"history": "History",
+			"geography": "Geography"
+		},
+
+		"features": {
+			"headline": {
+				"title": "Everything you need to ",
+				"highlight": "master any subject.",
+				"description": "Powerful tools designed to help you build a consistent study habit without the friction.",
+				"cta": "Explore all features"
+			},
+			"items": {
+				"createFast": {
+					"title": "Create decks fast",
+					"description": "Build flashcards in seconds with a clean editor and smart defaults."
+				},
+				"studySmarter": {
+					"title": "Study smarter",
+					"description": "Spaced repetition-inspired flow to help you remember longer."
+				},
+				"crossPlatform": {
+					"title": "Cross-platform",
+					"description": "Use hnfc on any device. Your progress stays with you."
+				},
+				"keyboardFriendly": {
+					"title": "Keyboard-friendly",
+					"description": "Speed through reviews using hotkeys for a focused workflow."
+				},
+				"tagsSearch": {
+					"title": "Tags & search",
+					"description": "Organize decks with tags and find cards instantly."
+				},
+				"progressTracking": {
+					"title": "Progress tracking",
+					"description": "See streaks, accuracy, and review volume at a glance."
+				}
+			}
+		},
+
+		"howItWorks": {
+			"title": "How it works",
+			"subtitle": "Three simple steps to get into a daily learning groove.",
+			"steps": {
+				"create": {
+					"title": "Create",
+					"description": "Add cards manually or import from CSV."
+				},
+				"review": {
+					"title": "Review",
+					"description": "Short daily sessions using smart recall."
+				},
+				"master": {
+					"title": "Master",
+					"description": "Track progress and refine weak areas."
+				}
+			}
+		},
+
+		"useCases": {
+			"title": "Use Cases",
+			"subtitle": "Perfect for any type of learner.",
+			"items": {
+				"languages": {
+					"tag": "Languages",
+					"title": "Language learning",
+					"description": "Vocabulary, phrases, and pronunciation drills."
+				},
+				"students": {
+					"tag": "Students",
+					"title": "Exam prep",
+					"description": "Definitions, formulas, and quick recall practice."
+				},
+				"career": {
+					"tag": "Career",
+					"title": "Tech & interviews",
+					"description": "Concepts, system design, and common Q&A."
+				},
+				"pro": {
+					"tag": "Pro",
+					"title": "Medical / law",
+					"description": "Dense knowledge made reviewable and consistent."
+				}
+			}
+		},
+
+		"testimonials": {
+			"title": "Loved by learners",
+			"items": [
+				{
+					"quote": "Clean UI. I can review daily without feeling overwhelmed.",
+					"name": "Minh T.",
+					"role": "Student"
+				},
+				{
+					"quote": "Hotkeys + quick sessions helped me keep a streak.",
+					"name": "Lan P.",
+					"role": "Language learner"
+				},
+				{
+					"quote": "Perfect for interview prep. Decks are easy to organize.",
+					"name": "Huy N.",
+					"role": "Software engineer"
+				}
+			]
+		},
+
+		"pricing": {
+			"title": "Simple, transparent pricing.",
+			"subtitle": "Start for free, upgrade when you need more storage or offline powers.",
+			"plans": {
+				"free": {
+					"name": "Free",
+					"price": "$0",
+					"description": "Perfect for casual learners getting started.",
+					"features": [
+						"Unlimited text cards",
+						"5 decks maximum",
+						"Basic progress stats",
+						"Sync across 2 devices",
+						"Community support"
+					],
+					"limitations": [
+						"No image uploads",
+						"No offline mode",
+						"Limited stats & heatmaps"
+					],
+					"cta": "Start Learning"
+				},
+				"plus": {
+					"badge": "Most Popular",
+					"name": "Plus",
+					"price": "$4",
+					"description": "Remove limits and unlock media support.",
+					"features": [
+						"Unlimited decks & cards",
+						"Image uploads (500MB storage)",
+						"Offline study mode",
+						"Sync unlimited devices",
+						"Advanced heatmaps & stats",
+						"Ad-free experience"
+					],
+					"period": "/month",
+					"cta": "Go Plus"
+				},
+				"pro": {
+					"name": "Pro",
+					"price": "$8",
+					"description": "For power users with heavy media needs.",
+					"features": [
+						"Everything in Plus",
+						"5GB media storage",
+						"Audio recording/uploads",
+						"Priority email support",
+						"Early access to beta features",
+						"Export data to CSV/Anki"
+					],
+					"period": "/month",
+					"cta": "Get Pro"
+				}
+			}
+		},
+
+		"faqs": {
+			"title": "Frequently asked questions",
+			"subtitle": "Can’t find the answer you’re looking for? Reach out to our {supportLink} team.",
+			"support": "customer support",
+			"items": [
+				{
+					"question": "Why is there a paid plan?",
+					"answer": "hnfc uses premium cloud infrastructure (Firebase) to ensure your data is synced instantly and securely across all devices. The paid plans help cover these server and storage costs so we can keep the app fast and reliable without selling your data."
+				},
+				{
+					"question": "Is the Free plan really free forever?",
+					"answer": "Yes! If you only need text-based flashcards and don’t need to upload heavy images, the Free plan is generous enough for most students. We will never delete your data just because you are on the Free tier."
+				},
+				{
+					"question": "Can I use it offline?",
+					"answer": "Offline mode is available on the Plus and Pro plans. It allows you to review your decks even without an internet connection, and changes will sync automatically once you are back online."
+				},
+				{
+					"question": "What happens to my data if I cancel?",
+					"answer": "Your data is yours. If you cancel a paid subscription, your account will revert to the Free tier limits. You won’t lose your text cards, but you may need to free up storage space if you are over the limit."
+				},
+				{
+					"question": "Do you offer student discounts?",
+					"answer": "Yes! We offer 50% off the Plus plan for students with a valid .edu email address. Contact support after signing up to apply."
+				}
+			]
+		},
+
+		"cta": {
+			"title": "Start your streak today.",
+			"description": "Join thousands of students and professionals learning more efficiently. Free to start, no credit card required.",
+			"button": "Create Free Account",
+			"note": "Includes 30-day trial of Pro features"
+		},
+
+		"footer": {
+			"description": "The smart flashcard app for serious learners. Master any subject with ease.",
+			"product": {
+				"title": "Product",
+				"items": ["Features", "Pricing", "Download", "Changelog"]
+			},
+			"resources": {
+				"title": "Resources",
+				"items": ["Blog", "Community", "Help Center", "API Docs"]
+			},
+			"newsletter": {
+				"title": "Stay updated",
+				"placeholder": "Enter your email",
+				"button": "Subscribe"
+			},
+			"legal": {
+				"copyright": "© 2025 hnfc Inc. All rights reserved.",
+				"privacy": "Privacy Policy",
+				"terms": "Terms of Service"
+			}
+		}
+	}
+}

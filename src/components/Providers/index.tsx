@@ -4,12 +4,18 @@ import { usePathname, useRouter } from 'next/navigation'
 import { ReactNode, useEffect, useRef } from 'react'
 
 import { auth, db, doc, onAuthStateChanged, onSnapshot } from '@/config'
-import { IUser } from '@/interfaces'
-import { useUserStore } from '@/stores'
+import { ILocale, IUser } from '@/interfaces'
+import { useLocaleStore, useUserStore } from '@/stores'
 import Loading from '../Loading'
 
-const Providers = ({ children }: { children: ReactNode }) => {
+interface ProvidersProps {
+	children: ReactNode
+	locale: ILocale
+}
+
+const Providers = ({ children, locale }: ProvidersProps) => {
 	const { isLoading, user, setUser, setIsLoading } = useUserStore()
+	const { setLocale } = useLocaleStore()
 	const unsubscribeProfileRef = useRef<null | (() => void)>(null)
 	const router = useRouter()
 	const pathname = usePathname()
@@ -50,10 +56,20 @@ const Providers = ({ children }: { children: ReactNode }) => {
 	}, [setIsLoading, setUser])
 
 	useEffect(() => {
-		if (user && (pathname === '/enter' || pathname === '/')) {
+		if (
+			user &&
+			(pathname === '/en/enter' ||
+				pathname === '/en' ||
+				pathname === '/vi/enter' ||
+				pathname === '/vi')
+		) {
 			router.replace('/dashboard')
 		}
 	}, [router, user, pathname])
+
+	useEffect(() => {
+		setLocale(locale)
+	}, [locale])
 
 	if (isLoading) {
 		return (

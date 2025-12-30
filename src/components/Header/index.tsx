@@ -6,6 +6,7 @@ import { useUserStore } from '@/stores'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import BackButton from '../BackButton'
+import LocaleSwapButton from '../LocaleSwapButton'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { Button } from '../ui/button'
 import {
@@ -47,12 +48,14 @@ export default function Header() {
 
 					<Link
 						href='/add'
-						className='block p-2 border rounded-lg text-neutral-500'>
+						className='hidden md:block p-2 border rounded-lg text-neutral-500'>
 						Add
 					</Link>
 				</div>
 
 				<div className='flex items-center gap-4'>
+					<LocaleSwapButton />
+
 					<ThemeButton />
 
 					<Button
@@ -76,6 +79,11 @@ export default function Header() {
 						</DropdownMenuTrigger>
 
 						<DropdownMenuContent>
+							<DropdownMenuItem
+								onClick={() => router.push('/add')}>
+								Add
+							</DropdownMenuItem>
+
 							<DropdownMenuItem
 								onClick={() => router.push('/me/profile')}>
 								Profile
