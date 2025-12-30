@@ -35,7 +35,7 @@ export default function EnterPage() {
 	)
 
 	return (
-		<main className='relative h-screen w-full bg-background text-foreground overflow-hidden'>
+		<main className='relative min-h-screen'>
 			<div className='fixed inset-0 z-0 pointer-events-none'>
 				<div className='absolute inset-0 bg-primary/5' />
 				<div className='absolute -top-[20%] -left-[10%] h-125 w-125 rounded-full bg-primary/20 blur-[120px]' />
