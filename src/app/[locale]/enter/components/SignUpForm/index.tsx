@@ -1,101 +1,134 @@
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Dispatch, SetStateAction } from 'react'
-import { Controller, useForm } from 'react-hook-form'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Dispatch, SetStateAction } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { useTranslations } from "next-intl";
+import type { ZodErrorMap } from "zod";
 
-import { Button } from '@/components/ui/button'
-import { Field, FieldError, FieldLabel } from '@/components/ui/field'
-import { Input } from '@/components/ui/input'
-import { RegisterInput, registerSchema } from '@/schemas'
-import { authService } from '@/services'
-import PasswordInput from '../PasswordInput'
+import { Button } from "@/components/ui/button";
+import { Field, FieldError, FieldLabel } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { RegisterInput, registerSchema } from "@/schemas";
+import { authService } from "@/services";
+import PasswordInput from "../PasswordInput";
 
 interface SignUpFormProps {
-	disabled: boolean
-	setDisabled: Dispatch<SetStateAction<boolean>>
+  disabled: boolean;
+  setDisabled: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function SignUpForm({ disabled, setDisabled }: SignUpFormProps) {
-	const {
-		control,
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm<RegisterInput>({
-		resolver: zodResolver(registerSchema),
-		defaultValues: {
-			displayName: '',
-			email: '',
-			password: '',
-		},
-		mode: 'onBlur',
-		reValidateMode: 'onChange',
-	})
+  const tFields = useTranslations("auth.fields");
+  const tSignUp = useTranslations("auth.signUp");
+  const tValidation = useTranslations("auth.validation");
 
-	const onSubmit = async (data: RegisterInput) => {
-		setDisabled(true)
+  const registerErrorMap: ZodErrorMap = (issue, ctx) => {
+    const field = issue.path[0];
 
-		try {
-			await authService.register(data)
-		} catch (error) {
-			console.error('Register failed:', error)
-		} finally {
-			setDisabled(false)
-		}
-	}
+    if (field === "displayName") {
+      if (issue.code === "too_small")
+        return { message: tValidation("nameMin") };
+      if (issue.code === "too_big") return { message: tValidation("nameMax") };
+    }
 
-	return (
-		<form
-			className='space-y-4 animate-in fade-in slide-in-from-bottom-2 duration-300'
-			onSubmit={handleSubmit(onSubmit)}>
-			<Field>
-				<FieldLabel>Display Name</FieldLabel>
+    if (field === "email")
+      return {
+        message: tValidation("invalidEmail"),
+      };
 
-				<Input
-					id='displayName'
-					type='text'
-					placeholder='John Doe'
-					className='h-12 border-input focus-visible:ring-primary'
-					{...register('displayName')}
-				/>
+    if (field === "password") {
+      if (issue.code === "too_small")
+        return { message: tValidation("passwordRequired") };
 
-				<FieldError>{errors.displayName?.message}</FieldError>
-			</Field>
+      if (issue.code === "invalid_string" && issue.validation === "regex")
+        return { message: tValidation("passwordRules") };
+    }
 
-			<Field>
-				<FieldLabel>Email Address</FieldLabel>
+    return { message: ctx.defaultError };
+  };
 
-				<Input
-					id='email'
-					type='email'
-					placeholder='you@example.com'
-					className='h-12 border-input focus-visible:ring-primary'
-					{...register('email')}
-				/>
+  const {
+    control,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<RegisterInput>({
+    resolver: zodResolver(registerSchema, { errorMap: registerErrorMap }),
+    defaultValues: {
+      displayName: "",
+      email: "",
+      password: "",
+    },
+    mode: "onBlur",
+    reValidateMode: "onChange",
+  });
 
-				<FieldError>{errors.email?.message}</FieldError>
-			</Field>
+  const onSubmit = async (data: RegisterInput) => {
+    setDisabled(true);
 
-			<Controller
-				control={control}
-				name='password'
-				render={({ field }) => (
-					<PasswordInput
-						label='Password'
-						placeholder='Create a password (min 8 chars)'
-						error={errors.password?.message}
-						value={field.value}
-						onChange={field.onChange}
-					/>
-				)}
-			/>
+    try {
+      await authService.register(data);
+    } catch (error) {
+      console.error("Register failed:", error);
+    } finally {
+      setDisabled(false);
+    }
+  };
 
-			<Button
-				disabled={disabled}
-				type='submit'
-				size='lg'
-				className='w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-11 mt-2'>
-				Create Account
-			</Button>
-		</form>
-	)
+  return (
+    <form
+      className="space-y-4 animate-in fade-in slide-in-from-bottom-2 duration-300"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <Field>
+        <FieldLabel>{tFields("displayName")}</FieldLabel>
+
+        <Input
+          id="displayName"
+          type="text"
+          placeholder={tFields("displayNamePlaceholder")}
+          className="h-12 border-input focus-visible:ring-primary"
+          {...register("displayName")}
+        />
+
+        <FieldError>{errors.displayName?.message}</FieldError>
+      </Field>
+
+      <Field>
+        <FieldLabel>{tFields("email")}</FieldLabel>
+
+        <Input
+          id="email"
+          type="email"
+          placeholder={tFields("emailPlaceholder")}
+          className="h-12 border-input focus-visible:ring-primary"
+          {...register("email")}
+        />
+
+        <FieldError>{errors.email?.message}</FieldError>
+      </Field>
+
+      <Controller
+        control={control}
+        name="password"
+        render={({ field }) => (
+          <PasswordInput
+            label={tFields("password")}
+            placeholder={tSignUp("passwordPlaceholder")}
+            error={errors.password?.message}
+            value={field.value}
+            onChange={field.onChange}
+          />
+        )}
+      />
+
+      <Button
+        disabled={disabled}
+        type="submit"
+        size="lg"
+        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-11 mt-2"
+      >
+        {tSignUp("submit")}
+      </Button>
+    </form>
+  );
 }

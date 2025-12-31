@@ -1,1 +1,1 @@
-export type ILocale = 'en' | 'vi'
+export type ILocale = "en" | "vi";

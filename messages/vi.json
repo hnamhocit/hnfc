@@ -1,288 +1,752 @@
 {
-	"home": {
-		"nav": {
-			"features": "Tính năng",
-			"howItWorks": "Cách hoạt động",
-			"useCases": "Trường hợp sử dụng",
-			"pricing": "Bảng giá",
-			"signIn": "Đăng nhập",
-			"getStarted": "Bắt đầu"
-		},
+  "home": {
+    "nav": {
+      "features": "Tính năng",
+      "howItWorks": "Cách hoạt động",
+      "useCases": "Trường hợp sử dụng",
+      "pricing": "Bảng giá",
+      "signIn": "Đăng nhập",
+      "getStarted": "Bắt đầu"
+    },
 
-		"hero": {
-			"badge": {
-				"minimal": "Tối giản",
-				"fastReviews": "Ôn tập nhanh",
-				"crossPlatform": "Đa nền tảng"
-			},
-			"title": {
-				"line1": "Học nhanh hơn với ",
-				"line2": "thẻ ghi nhớ thông minh."
-			},
-			"description": "hnfc là ứng dụng đa nền tảng được thiết kế để tập trung. Tạo bộ thẻ ngay lập tức, ôn tập bằng phương pháp lặp lại ngắt quãng và xây dựng trí nhớ lâu dài — không bị xao nhãng.",
-			"cta": {
-				"primary": "Bắt đầu học miễn phí",
-				"secondary": "Xem tính năng"
-			},
-			"stats": {
-				"activeUsers": "người dùng hoạt động",
-				"cardsReviewed": "thẻ đã ôn tập",
-				"rating": "đánh giá"
-			},
-			"session": {
-				"header": {
-					"title": "Phiên học: C++ Nâng cao",
-					"live": "Trực tiếp"
-				},
-				"tag": {
-					"definition": "Định nghĩa"
-				},
-				"content": {
-					"question": "\"Alignment\" có nghĩa là gì trong struct C?",
-					"hint": "Gợi ý: Hãy nghĩ về chu kỳ CPU và bộ đệm bộ nhớ."
-				},
-				"meta": {
-					"spaceToFlip": "Nhấn Space để lật",
-					"rateShortcut": "Nhấn 1-4 để đánh giá"
-				},
-				"actions": {
-					"again": "Lặp lại (1 phút)",
-					"good": "Tốt (1 ngày)"
-				},
-				"streak": {
-					"days": "12 ngày",
-					"label": "Chuỗi học hiện tại"
-				}
-			}
-		},
+    "hero": {
+      "badge": {
+        "minimal": "Tối giản",
+        "fastReviews": "Ôn tập nhanh",
+        "crossPlatform": "Đa nền tảng"
+      },
+      "title": {
+        "line1": "Học nhanh hơn với ",
+        "line2": "thẻ ghi nhớ thông minh."
+      },
+      "description": "hnfc là ứng dụng đa nền tảng được thiết kế để tập trung. Tạo bộ thẻ ngay lập tức, ôn tập bằng phương pháp lặp lại ngắt quãng và xây dựng trí nhớ lâu dài — không bị xao nhãng.",
+      "cta": {
+        "primary": "Bắt đầu học miễn phí",
+        "secondary": "Xem tính năng"
+      },
+      "stats": {
+        "activeUsers": "người dùng hoạt động",
+        "cardsReviewed": "thẻ đã ôn tập",
+        "rating": "đánh giá"
+      },
+      "session": {
+        "header": {
+          "title": "Phiên học: C++ Nâng cao",
+          "live": "Trực tiếp"
+        },
+        "tag": {
+          "definition": "Định nghĩa"
+        },
+        "content": {
+          "question": "\"Alignment\" có nghĩa là gì trong struct C?",
+          "hint": "Gợi ý: Hãy nghĩ về chu kỳ CPU và bộ đệm bộ nhớ."
+        },
+        "meta": {
+          "spaceToFlip": "Nhấn Space để lật",
+          "rateShortcut": "Nhấn 1-4 để đánh giá"
+        },
+        "actions": {
+          "again": "Lặp lại (1 phút)",
+          "good": "Tốt (1 ngày)"
+        },
+        "streak": {
+          "days": "12 ngày",
+          "label": "Chuỗi học hiện tại"
+        }
+      }
+    },
 
-		"categories": {
-			"computerScience": "Khoa học máy tính",
-			"medical": "Y khoa",
-			"law": "Luật",
-			"languages": "Ngôn ngữ",
-			"history": "Lịch sử",
-			"geography": "Địa lý"
-		},
+    "categories": {
+      "computerScience": "Khoa học máy tính",
+      "medical": "Y khoa",
+      "law": "Luật",
+      "languages": "Ngôn ngữ",
+      "history": "Lịch sử",
+      "geography": "Địa lý"
+    },
 
-		"features": {
-			"headline": {
-				"title": "Mọi thứ bạn cần để ",
-				"highlight": "làm chủ bất kỳ môn học nào.",
-				"description": "Những công cụ mạnh mẽ giúp bạn xây dựng thói quen học tập bền vững mà không gây áp lực.",
-				"cta": "Khám phá tất cả tính năng"
-			},
-			"items": {
-				"createFast": {
-					"title": "Tạo bộ thẻ nhanh chóng",
-					"description": "Xây dựng flashcard chỉ trong vài giây với trình soạn thảo gọn gàng và mặc định thông minh."
-				},
-				"studySmarter": {
-					"title": "Học thông minh hơn",
-					"description": "Luồng học dựa trên lặp lại ngắt quãng giúp ghi nhớ lâu hơn."
-				},
-				"crossPlatform": {
-					"title": "Đa nền tảng",
-					"description": "Sử dụng hnfc trên mọi thiết bị. Tiến trình của bạn luôn được đồng bộ."
-				},
-				"keyboardFriendly": {
-					"title": "Thân thiện với bàn phím",
-					"description": "Ôn tập nhanh bằng phím tắt để duy trì sự tập trung."
-				},
-				"tagsSearch": {
-					"title": "Thẻ & tìm kiếm",
-					"description": "Tổ chức bộ thẻ bằng tag và tìm kiếm ngay lập tức."
-				},
-				"progressTracking": {
-					"title": "Theo dõi tiến độ",
-					"description": "Xem chuỗi học, độ chính xác và khối lượng ôn tập trong nháy mắt."
-				}
-			}
-		},
+    "features": {
+      "headline": {
+        "title": "Mọi thứ bạn cần để ",
+        "highlight": "làm chủ bất kỳ môn học nào.",
+        "description": "Những công cụ mạnh mẽ giúp bạn xây dựng thói quen học tập bền vững mà không gây áp lực.",
+        "cta": "Khám phá tất cả tính năng"
+      },
+      "items": {
+        "createFast": {
+          "title": "Tạo bộ thẻ nhanh chóng",
+          "description": "Xây dựng flashcard chỉ trong vài giây với trình soạn thảo gọn gàng và mặc định thông minh."
+        },
+        "studySmarter": {
+          "title": "Học thông minh hơn",
+          "description": "Luồng học dựa trên lặp lại ngắt quãng giúp ghi nhớ lâu hơn."
+        },
+        "crossPlatform": {
+          "title": "Đa nền tảng",
+          "description": "Sử dụng hnfc trên mọi thiết bị. Tiến trình của bạn luôn được đồng bộ."
+        },
+        "keyboardFriendly": {
+          "title": "Thân thiện với bàn phím",
+          "description": "Ôn tập nhanh bằng phím tắt để duy trì sự tập trung."
+        },
+        "tagsSearch": {
+          "title": "Thẻ & tìm kiếm",
+          "description": "Tổ chức bộ thẻ bằng tag và tìm kiếm ngay lập tức."
+        },
+        "progressTracking": {
+          "title": "Theo dõi tiến độ",
+          "description": "Xem chuỗi học, độ chính xác và khối lượng ôn tập trong nháy mắt."
+        }
+      }
+    },
 
-		"howItWorks": {
-			"title": "Cách hoạt động",
-			"subtitle": "Ba bước đơn giản để duy trì nhịp học mỗi ngày.",
-			"steps": {
-				"create": {
-					"title": "Tạo",
-					"description": "Thêm thẻ thủ công hoặc nhập từ CSV."
-				},
-				"review": {
-					"title": "Ôn tập",
-					"description": "Các phiên học ngắn mỗi ngày với ghi nhớ thông minh."
-				},
-				"master": {
-					"title": "Làm chủ",
-					"description": "Theo dõi tiến độ và cải thiện điểm yếu."
-				}
-			}
-		},
+    "howItWorks": {
+      "title": "Cách hoạt động",
+      "subtitle": "Ba bước đơn giản để duy trì nhịp học mỗi ngày.",
+      "steps": {
+        "create": {
+          "title": "Tạo",
+          "description": "Thêm thẻ thủ công hoặc nhập từ CSV."
+        },
+        "review": {
+          "title": "Ôn tập",
+          "description": "Các phiên học ngắn mỗi ngày với ghi nhớ thông minh."
+        },
+        "master": {
+          "title": "Làm chủ",
+          "description": "Theo dõi tiến độ và cải thiện điểm yếu."
+        }
+      }
+    },
 
-		"useCases": {
-			"title": "Trường hợp sử dụng",
-			"subtitle": "Phù hợp với mọi kiểu người học.",
-			"items": {
-				"languages": {
-					"tag": "Ngôn ngữ",
-					"title": "Học ngoại ngữ",
-					"description": "Từ vựng, cụm từ và luyện phát âm."
-				},
-				"students": {
-					"tag": "Học sinh",
-					"title": "Luyện thi",
-					"description": "Định nghĩa, công thức và luyện ghi nhớ nhanh."
-				},
-				"career": {
-					"tag": "Sự nghiệp",
-					"title": "Công nghệ & phỏng vấn",
-					"description": "Kiến thức nền tảng, thiết kế hệ thống và câu hỏi thường gặp."
-				},
-				"pro": {
-					"tag": "Chuyên sâu",
-					"title": "Y khoa / Luật",
-					"description": "Khối lượng kiến thức lớn được chia nhỏ và ôn tập hiệu quả."
-				}
-			}
-		},
+    "useCases": {
+      "title": "Trường hợp sử dụng",
+      "subtitle": "Phù hợp với mọi kiểu người học.",
+      "items": {
+        "languages": {
+          "tag": "Ngôn ngữ",
+          "title": "Học ngoại ngữ",
+          "description": "Từ vựng, cụm từ và luyện phát âm."
+        },
+        "students": {
+          "tag": "Học sinh",
+          "title": "Luyện thi",
+          "description": "Định nghĩa, công thức và luyện ghi nhớ nhanh."
+        },
+        "career": {
+          "tag": "Sự nghiệp",
+          "title": "Công nghệ & phỏng vấn",
+          "description": "Kiến thức nền tảng, thiết kế hệ thống và câu hỏi thường gặp."
+        },
+        "pro": {
+          "tag": "Chuyên sâu",
+          "title": "Y khoa / Luật",
+          "description": "Khối lượng kiến thức lớn được chia nhỏ và ôn tập hiệu quả."
+        }
+      }
+    },
 
-		"testimonials": {
-			"title": "Được người học yêu thích",
-			"items": [
-				{
-					"quote": "Giao diện gọn gàng. Tôi có thể ôn tập mỗi ngày mà không bị quá tải.",
-					"name": "Minh T.",
-					"role": "Sinh viên"
-				},
-				{
-					"quote": "Phím tắt và các phiên học nhanh giúp tôi duy trì chuỗi học.",
-					"name": "Lan P.",
-					"role": "Người học ngôn ngữ"
-				},
-				{
-					"quote": "Rất phù hợp để chuẩn bị phỏng vấn. Bộ thẻ dễ sắp xếp.",
-					"name": "Huy N.",
-					"role": "Kỹ sư phần mềm"
-				}
-			]
-		},
+    "testimonials": {
+      "title": "Được người học yêu thích",
+      "items": [
+        {
+          "quote": "Giao diện gọn gàng. Tôi có thể ôn tập mỗi ngày mà không bị quá tải.",
+          "name": "Minh T.",
+          "role": "Sinh viên"
+        },
+        {
+          "quote": "Phím tắt và các phiên học nhanh giúp tôi duy trì chuỗi học.",
+          "name": "Lan P.",
+          "role": "Người học ngôn ngữ"
+        },
+        {
+          "quote": "Rất phù hợp để chuẩn bị phỏng vấn. Bộ thẻ dễ sắp xếp.",
+          "name": "Huy N.",
+          "role": "Kỹ sư phần mềm"
+        }
+      ]
+    },
 
-		"pricing": {
-			"title": "Bảng giá đơn giản, minh bạch.",
-			"subtitle": "Bắt đầu miễn phí, nâng cấp khi bạn cần thêm dung lượng hoặc chế độ offline.",
-			"plans": {
-				"free": {
-					"name": "Miễn phí",
-					"price": "$0",
-					"description": "Phù hợp cho người mới bắt đầu.",
-					"features": [
-						"Không giới hạn thẻ văn bản",
-						"Tối đa 5 bộ thẻ",
-						"Thống kê tiến độ cơ bản",
-						"Đồng bộ trên 2 thiết bị",
-						"Hỗ trợ cộng đồng"
-					],
-					"limitations": [
-						"Không hỗ trợ tải hình ảnh",
-						"Không có chế độ offline",
-						"Thống kê & heatmap giới hạn"
-					],
-					"cta": "Bắt đầu học"
-				},
-				"plus": {
-					"badge": "Phổ biến nhất",
-					"name": "Plus",
-					"price": "$4",
-					"description": "Gỡ bỏ giới hạn và mở khóa hỗ trợ media.",
-					"features": [
-						"Không giới hạn bộ thẻ & thẻ",
-						"Upload hình ảnh (500MB)",
-						"Chế độ học offline",
-						"Đồng bộ không giới hạn thiết bị",
-						"Heatmap & thống kê nâng cao",
-						"Trải nghiệm không quảng cáo"
-					],
-					"period": "/tháng",
-					"cta": "Nâng cấp Plus"
-				},
-				"pro": {
-					"name": "Pro",
-					"price": "$8",
-					"description": "Dành cho người dùng nâng cao với nhu cầu media lớn.",
-					"features": [
-						"Bao gồm mọi tính năng Plus",
-						"5GB lưu trữ media",
-						"Ghi âm / upload audio",
-						"Hỗ trợ email ưu tiên",
-						"Truy cập sớm tính năng beta",
-						"Xuất dữ liệu CSV/Anki"
-					],
-					"period": "/tháng",
-					"cta": "Nâng cấp Pro"
-				}
-			}
-		},
+    "pricing": {
+      "title": "Bảng giá đơn giản, minh bạch.",
+      "subtitle": "Bắt đầu miễn phí, nâng cấp khi bạn cần thêm dung lượng hoặc chế độ offline.",
+      "plans": {
+        "free": {
+          "name": "Miễn phí",
+          "price": "$0",
+          "description": "Phù hợp cho người mới bắt đầu.",
+          "features": [
+            "Không giới hạn thẻ văn bản",
+            "Tối đa 5 bộ thẻ",
+            "Thống kê tiến độ cơ bản",
+            "Đồng bộ trên 2 thiết bị",
+            "Hỗ trợ cộng đồng"
+          ],
+          "limitations": [
+            "Không hỗ trợ tải hình ảnh",
+            "Không có chế độ offline",
+            "Thống kê & heatmap giới hạn"
+          ],
+          "cta": "Bắt đầu học"
+        },
+        "plus": {
+          "badge": "Phổ biến nhất",
+          "name": "Plus",
+          "price": "$4",
+          "description": "Gỡ bỏ giới hạn và mở khóa hỗ trợ media.",
+          "features": [
+            "Không giới hạn bộ thẻ & thẻ",
+            "Upload hình ảnh (500MB)",
+            "Chế độ học offline",
+            "Đồng bộ không giới hạn thiết bị",
+            "Heatmap & thống kê nâng cao",
+            "Trải nghiệm không quảng cáo"
+          ],
+          "period": "/tháng",
+          "cta": "Nâng cấp Plus"
+        },
+        "pro": {
+          "name": "Pro",
+          "price": "$8",
+          "description": "Dành cho người dùng nâng cao với nhu cầu media lớn.",
+          "features": [
+            "Bao gồm mọi tính năng Plus",
+            "5GB lưu trữ media",
+            "Ghi âm / upload audio",
+            "Hỗ trợ email ưu tiên",
+            "Truy cập sớm tính năng beta",
+            "Xuất dữ liệu CSV/Anki"
+          ],
+          "period": "/tháng",
+          "cta": "Nâng cấp Pro"
+        }
+      }
+    },
 
-		"faqs": {
-			"title": "Câu hỏi thường gặp",
-			"subtitle": "Không tìm thấy câu trả lời bạn cần? Hãy liên hệ với đội ngũ {supportLink} của chúng tôi.",
-			"support": "hỗ trợ khách hàng",
-			"items": [
-				{
-					"question": "Tại sao lại có gói trả phí?",
-					"answer": "hnfc sử dụng hạ tầng đám mây cao cấp (Firebase) để đảm bảo dữ liệu được đồng bộ ngay lập tức và an toàn trên mọi thiết bị. Các gói trả phí giúp chúng tôi chi trả chi phí máy chủ và lưu trữ, từ đó duy trì ứng dụng nhanh và ổn định mà không cần bán dữ liệu người dùng."
-				},
-				{
-					"question": "Gói Miễn phí có thật sự miễn phí mãi mãi không?",
-					"answer": "Có! Nếu bạn chỉ cần flashcard dạng văn bản và không cần tải lên hình ảnh dung lượng lớn, gói Miễn phí là đủ cho hầu hết sinh viên. Chúng tôi sẽ không bao giờ xoá dữ liệu của bạn chỉ vì bạn dùng gói Free."
-				},
-				{
-					"question": "Tôi có thể sử dụng khi không có internet không?",
-					"answer": "Chế độ offline có sẵn trong các gói Plus và Pro. Bạn có thể ôn tập ngay cả khi không có kết nối mạng, và mọi thay đổi sẽ tự động đồng bộ khi bạn trực tuyến trở lại."
-				},
-				{
-					"question": "Điều gì xảy ra với dữ liệu của tôi nếu tôi huỷ gói?",
-					"answer": "Dữ liệu luôn thuộc về bạn. Khi huỷ gói trả phí, tài khoản sẽ quay về giới hạn của gói Miễn phí. Bạn sẽ không mất các thẻ văn bản, nhưng có thể cần giải phóng bớt dung lượng nếu vượt quá giới hạn."
-				},
-				{
-					"question": "Có ưu đãi cho sinh viên không?",
-					"answer": "Có! Chúng tôi giảm 50% cho gói Plus dành cho sinh viên có email .edu hợp lệ. Sau khi đăng ký, hãy liên hệ bộ phận hỗ trợ để được áp dụng ưu đãi."
-				}
-			]
-		},
+    "faqs": {
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Không tìm thấy câu trả lời bạn cần? Hãy liên hệ với đội ngũ {supportLink} của chúng tôi.",
+      "support": "hỗ trợ khách hàng",
+      "items": [
+        {
+          "question": "Tại sao lại có gói trả phí?",
+          "answer": "hnfc sử dụng hạ tầng đám mây cao cấp (Firebase) để đảm bảo dữ liệu được đồng bộ ngay lập tức và an toàn trên mọi thiết bị. Các gói trả phí giúp chúng tôi chi trả chi phí máy chủ và lưu trữ, từ đó duy trì ứng dụng nhanh và ổn định mà không cần bán dữ liệu người dùng."
+        },
+        {
+          "question": "Gói Miễn phí có thật sự miễn phí mãi mãi không?",
+          "answer": "Có! Nếu bạn chỉ cần flashcard dạng văn bản và không cần tải lên hình ảnh dung lượng lớn, gói Miễn phí là đủ cho hầu hết sinh viên. Chúng tôi sẽ không bao giờ xoá dữ liệu của bạn chỉ vì bạn dùng gói Free."
+        },
+        {
+          "question": "Tôi có thể sử dụng khi không có internet không?",
+          "answer": "Chế độ offline có sẵn trong các gói Plus và Pro. Bạn có thể ôn tập ngay cả khi không có kết nối mạng, và mọi thay đổi sẽ tự động đồng bộ khi bạn trực tuyến trở lại."
+        },
+        {
+          "question": "Điều gì xảy ra với dữ liệu của tôi nếu tôi huỷ gói?",
+          "answer": "Dữ liệu luôn thuộc về bạn. Khi huỷ gói trả phí, tài khoản sẽ quay về giới hạn của gói Miễn phí. Bạn sẽ không mất các thẻ văn bản, nhưng có thể cần giải phóng bớt dung lượng nếu vượt quá giới hạn."
+        },
+        {
+          "question": "Có ưu đãi cho sinh viên không?",
+          "answer": "Có! Chúng tôi giảm 50% cho gói Plus dành cho sinh viên có email .edu hợp lệ. Sau khi đăng ký, hãy liên hệ bộ phận hỗ trợ để được áp dụng ưu đãi."
+        }
+      ]
+    },
 
-		"cta": {
-			"title": "Bắt đầu chuỗi học của bạn ngay hôm nay.",
-			"description": "Tham gia cùng hàng nghìn học sinh và người đi làm học tập hiệu quả hơn. Miễn phí bắt đầu, không cần thẻ tín dụng.",
-			"button": "Tạo tài khoản miễn phí",
-			"note": "Bao gồm 30 ngày dùng thử tính năng Pro"
-		},
+    "cta": {
+      "title": "Bắt đầu chuỗi học của bạn ngay hôm nay.",
+      "description": "Tham gia cùng hàng nghìn học sinh và người đi làm học tập hiệu quả hơn. Miễn phí bắt đầu, không cần thẻ tín dụng.",
+      "button": "Tạo tài khoản miễn phí",
+      "note": "Bao gồm 30 ngày dùng thử tính năng Pro"
+    },
 
-		"footer": {
-			"description": "Ứng dụng flashcard thông minh cho người học nghiêm túc. Làm chủ mọi môn học một cách dễ dàng.",
-			"product": {
-				"title": "Sản phẩm",
-				"items": ["Tính năng", "Bảng giá", "Tải về", "Nhật ký cập nhật"]
-			},
-			"resources": {
-				"title": "Tài nguyên",
-				"items": [
-					"Blog",
-					"Cộng đồng",
-					"Trung tâm trợ giúp",
-					"Tài liệu API"
-				]
-			},
-			"newsletter": {
-				"title": "Nhận cập nhật",
-				"placeholder": "Nhập email của bạn",
-				"button": "Đăng ký"
-			},
-			"legal": {
-				"copyright": "© 2025 hnfc Inc. Bảo lưu mọi quyền.",
-				"privacy": "Chính sách bảo mật",
-				"terms": "Điều khoản sử dụng"
-			}
-		}
-	}
+    "footer": {
+      "description": "Ứng dụng flashcard thông minh cho người học nghiêm túc. Làm chủ mọi môn học một cách dễ dàng.",
+      "product": {
+        "title": "Sản phẩm",
+        "items": ["Tính năng", "Bảng giá", "Tải về", "Nhật ký cập nhật"]
+      },
+      "resources": {
+        "title": "Tài nguyên",
+        "items": ["Blog", "Cộng đồng", "Trung tâm trợ giúp", "Tài liệu API"]
+      },
+      "newsletter": {
+        "title": "Nhận cập nhật",
+        "placeholder": "Nhập email của bạn",
+        "button": "Đăng ký"
+      },
+      "legal": {
+        "copyright": "© 2025 hnfc Inc. Bảo lưu mọi quyền.",
+        "privacy": "Chính sách bảo mật",
+        "terms": "Điều khoản sử dụng"
+      }
+    }
+  },
+
+  "menu": {
+    "add": "Thêm",
+    "profile": "Hồ sơ",
+    "notifications": "Thông báo",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
+  },
+
+  "common": {
+    "back": "Quay lại",
+    "cancel": "Hủy",
+    "create": "Tạo",
+    "delete": "Xóa",
+    "dueDate": "Ngày đến hạn",
+    "edit": "Chỉnh sửa",
+    "failedToSave": "Lưu thất bại",
+    "loading": "Đang tải...",
+    "logoAlt": "Logo hnfc",
+    "more": "Xem thêm",
+    "userAvatar": "Ảnh đại diện",
+    "retry": "Thử lại",
+    "repetitions": "Số lần lặp",
+    "save": "Lưu",
+    "saveChanges": "Lưu thay đổi",
+    "saved": "Đã lưu",
+    "saving": "Đang lưu..."
+  },
+
+  "settings": {
+    "heading": "Cài đặt hồ sơ",
+    "subtitle": "Cập nhật hồ sơ",
+    "displayName": "Tên hiển thị",
+    "photoUrl": "URL ảnh đại diện",
+    "photoHint": "Dán đường dẫn ảnh. Để trống nếu không dùng ảnh đại diện.",
+    "displayNamePlaceholder": "Tên của bạn",
+    "photoUrlPlaceholder": "https://...",
+    "preview": "Xem trước",
+    "photoPreviewAlt": "xem trước"
+  },
+
+  "profile": {
+    "title": "Hồ sơ",
+    "subtitle": "Thông tin người dùng",
+    "userId": "ID người dùng",
+    "created": "Ngày tạo",
+    "updated": "Cập nhật lần cuối",
+    "noAvatar": "Chưa có ảnh đại diện",
+    "noDisplayName": "Chưa có tên hiển thị"
+  },
+
+  "locale": {
+    "switch": "Chuyển ngôn ngữ"
+  },
+
+  "auth": {
+    "tabs": {
+      "signIn": "Đăng nhập",
+      "signUp": "Tạo tài khoản"
+    },
+    "title": {
+      "signIn": "Chào mừng trở lại",
+      "signUp": "Bắt đầu"
+    },
+    "subtitle": {
+      "signIn": "Nhập thông tin để truy cập bộ thẻ.",
+      "signUp": "Tạo tài khoản để bắt đầu học."
+    },
+    "hero": {
+      "tagline": "Flashcard đơn giản",
+      "headline": {
+        "line1": "Nâng tầm kiến thức",
+        "line2": "mỗi thẻ một bước."
+      },
+      "description": "Xây dựng thói quen, theo dõi tiến độ và ghi nhớ lâu hơn với hệ thống lặp lại ngắt quãng được tối ưu.",
+      "features": [
+        {
+          "title": "Tạo thẻ",
+          "description": "Bộ thẻ tùy chỉnh"
+        },
+        {
+          "title": "Ôn tập",
+          "description": "Tập trung hằng ngày"
+        },
+        {
+          "title": "Theo dõi",
+          "description": "Thống kê thông minh"
+        }
+      ]
+    },
+    "consent": "Tiếp tục nghĩa là bạn đồng ý với {terms} và {privacy}.",
+    "providers": {
+      "github": "GitHub",
+      "facebook": "Facebook",
+      "google": "Google",
+      "orEmail": "Hoặc Email"
+    },
+    "fields": {
+      "displayName": "Tên hiển thị",
+      "displayNamePlaceholder": "Nguyễn Văn A",
+      "email": "Địa chỉ email",
+      "emailPlaceholder": "ban@example.com",
+      "password": "Mật khẩu"
+    },
+    "signIn": {
+      "passwordPlaceholder": "Nhập mật khẩu",
+      "rememberMe": "Ghi nhớ đăng nhập",
+      "forgotPassword": "Quên mật khẩu?",
+      "submit": "Đăng nhập"
+    },
+    "signUp": {
+      "passwordPlaceholder": "Tạo mật khẩu (tối thiểu 8 ký tự)",
+      "submit": "Tạo tài khoản"
+    },
+    "validation": {
+      "invalidEmail": "Email không hợp lệ",
+      "nameMax": "Tên quá dài",
+      "nameMin": "Tên quá ngắn",
+      "passwordRequired": "Mật khẩu là bắt buộc",
+      "passwordRules": "Tối thiểu 8 ký tự, gồm chữ hoa, thường, số và ký tự đặc biệt."
+    }
+  },
+
+  "deckPicker": {
+    "signInRequired": "Vui lòng đăng nhập",
+    "loading": "Đang tải bộ thẻ...",
+    "empty": "Chưa có bộ thẻ",
+    "placeholder": "Chọn bộ thẻ"
+  },
+
+  "cardForm": {
+    "title": {
+      "create": "Tạo thẻ",
+      "edit": "Chỉnh sửa thẻ"
+    },
+    "subtitle": {
+      "create": "Thêm thẻ mới vào bộ.",
+      "edit": "Cập nhật bộ hoặc nội dung thẻ."
+    },
+    "fields": {
+      "deck": "Bộ thẻ",
+      "front": "Mặt trước",
+      "back": "Mặt sau"
+    },
+    "errors": {
+      "save": "Lưu thẻ thất bại"
+    },
+    "actions": {
+      "create": "Tạo",
+      "saveChanges": "Lưu thay đổi"
+    },
+    "validation": {
+      "backRequired": "Mặt sau không được để trống.",
+      "deckRequired": "Vui lòng chọn bộ thẻ.",
+      "frontRequired": "Mặt trước không được để trống."
+    }
+  },
+
+  "deckForm": {
+    "title": {
+      "create": "Tạo bộ thẻ",
+      "edit": "Chỉnh sửa bộ thẻ"
+    },
+    "subtitle": {
+      "create": "Viết như blog: tiêu đề không viền + mô tả markdown trực tiếp.",
+      "edit": "Đang chỉnh sửa bộ: {deckId}"
+    },
+    "actions": {
+      "reset": "Đặt lại",
+      "save": "Lưu",
+      "loading": "Đang tải bộ thẻ..."
+    },
+    "errors": {
+      "load": "Tải bộ thẻ thất bại",
+      "save": "Lưu thất bại"
+    },
+    "fields": {
+      "title": {
+        "label": "Tiêu đề",
+        "placeholder": "Nhập tiêu đề…"
+      },
+      "color": {
+        "label": "Màu",
+        "choose": "Chọn",
+        "presets": "Màu mẫu",
+        "custom": "Tùy chỉnh",
+        "placeholder": "#3b82f6",
+        "pickerAria": "Chọn màu"
+      },
+      "tags": {
+        "label": "Thẻ",
+        "empty": "Chưa có thẻ.",
+        "placeholder": "Nhập thẻ và nhấn Enter",
+        "add": "Thêm",
+        "remove": "Xóa {tag}"
+      },
+      "description": {
+        "label": "Mô tả (Markdown)",
+        "placeholder": "Nhập mô tả..."
+      }
+    },
+    "validation": {
+      "color": "Mã màu không hợp lệ",
+      "descriptionMax": "Mô tả quá dài",
+      "tagMax": "Thẻ quá dài",
+      "titleMax": "Tiêu đề quá dài",
+      "titleRequired": "Tiêu đề không được để trống"
+    }
+  },
+
+  "decks": {
+    "list": {
+      "loadError": "Không thể tải danh sách bộ thẻ",
+      "loading": "Đang tải bộ thẻ...",
+      "emptyTitle": "Không tìm thấy bộ thẻ",
+      "emptyDescription": "Hãy thử điều chỉnh tìm kiếm hoặc tạo bộ thẻ mới."
+    },
+    "item": {
+      "cards": "{count} thẻ",
+      "due": "{count} đến hạn",
+      "mastery": "Mức độ thành thạo",
+      "study": "Học ngay"
+    }
+  },
+
+  "deckDetail": {
+    "loading": "Đang tải bộ thẻ...",
+    "notFound": "Không tìm thấy bộ thẻ!",
+    "error": "Lỗi khi tải bộ thẻ",
+    "description": {
+      "title": "Mô tả",
+      "empty": "Chưa có mô tả."
+    },
+    "cards": {
+      "loadError": "Không thể tải thẻ",
+      "loading": "Đang tải thẻ...",
+      "emptyTitle": "Chưa có thẻ",
+      "emptyDescription": "Thêm thẻ đầu tiên để bắt đầu học.",
+      "create": "Tạo thẻ"
+    },
+    "actions": {
+      "back": "Quay lại",
+      "study": "Học"
+    }
+  },
+
+  "study": {
+    "errors": {
+      "load": "Không thể tải phiên học",
+      "notFound": "Không tìm thấy bộ thẻ"
+    },
+    "finish": {
+      "title": "Làm tốt lắm",
+      "subtitle": "Đã hoàn thành",
+      "reviewed": "Bạn đã ôn {count} thẻ.",
+      "studyAgain": "Học lại",
+      "backToDeck": "Quay về bộ thẻ"
+    },
+    "progress": {
+      "card": "Thẻ {current}/{total}"
+    },
+    "empty": {
+      "description": "Chưa có thẻ để học trong bộ này.",
+      "create": "Tạo thẻ"
+    },
+    "card": {
+      "front": "Mặt trước",
+      "back": "Mặt sau",
+      "hidden": "Đáp án đang ẩn",
+      "show": "Hiện đáp án",
+      "ratings": {
+        "again": "Học lại",
+        "hard": "Khó",
+        "good": "Tốt",
+        "easy": "Dễ"
+      }
+    }
+  },
+
+  "cards": {
+    "states": {
+      "new": "Mới",
+      "learning": "Đang học",
+      "review": "Ôn tập",
+      "relearning": "Học lại"
+    },
+    "menuHint": "Nhấn menu để chỉnh sửa",
+    "notAvailable": "Không có"
+  },
+
+  "legal": {
+    "header": {
+      "subtitle": "Pháp lý & Quyền riêng tư",
+      "home": "Về trang chủ"
+    },
+    "footer": {
+      "privacy": "Bảo mật",
+      "terms": "Điều khoản",
+      "deletion": "Xóa dữ liệu"
+    },
+    "common": {
+      "lastUpdated": "Cập nhật lần cuối: {date}"
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật",
+      "intro": "Chính sách này giải thích cách hnfc thu thập, sử dụng và bảo vệ thông tin của bạn khi dùng ứng dụng.",
+      "sections": [
+        {
+          "title": "Tổng quan",
+          "body": "hnfc là ứng dụng học tập giúp người dùng tạo và ôn bộ thẻ. Chúng tôi chỉ thu thập dữ liệu tối thiểu để cung cấp xác thực và tính năng cốt lõi."
+        },
+        {
+          "title": "Thông tin thu thập",
+          "body": "Tùy phương thức đăng nhập (Email & Mật khẩu hoặc Google, Facebook, GitHub), chúng tôi có thể thu thập:",
+          "list": [
+            "Tên hiển thị",
+            "Địa chỉ email",
+            "URL ảnh đại diện (nếu có)",
+            "Định danh tài khoản cơ bản (ID người dùng)"
+          ]
+        },
+        {
+          "title": "Dữ liệu học bạn tạo",
+          "body": "Khi dùng hnfc, bạn có thể tạo nội dung học. Dữ liệu có thể gồm:",
+          "list": [
+            "Bộ thẻ (tiêu đề, mô tả, màu, thẻ)",
+            "Thẻ/ghi chú và tiến trình học",
+            "Thông tin lập lịch cho việc ôn tập"
+          ]
+        },
+        {
+          "title": "Cách sử dụng thông tin",
+          "list": [
+            "Xác thực và quản lý tài khoản",
+            "Cung cấp tính năng cốt lõi (tạo/chỉnh sửa nội dung học)",
+            "Lưu tiến trình và tùy chọn học",
+            "Duy trì bảo mật và ngăn chặn lạm dụng"
+          ]
+        },
+        {
+          "title": "Chia sẻ dữ liệu",
+          "body": "Chúng tôi không bán thông tin cá nhân. Không chia sẻ dữ liệu cá nhân cho bên thứ ba trừ khi:",
+          "list": [
+            "Theo yêu cầu của pháp luật hoặc quy trình pháp lý",
+            "Với nhà cung cấp dịch vụ cần thiết để vận hành ứng dụng (ví dụ: Firebase cho xác thực và lưu trữ)"
+          ]
+        },
+        {
+          "title": "Lưu trữ & bảo mật",
+          "body": "Dữ liệu được lưu trên Firebase. Chúng tôi áp dụng kiểm soát truy cập để chỉ chủ sở hữu đã xác thực mới xem được nội dung. Dù không hệ thống nào an toàn tuyệt đối, chúng tôi cố gắng bảo vệ dữ liệu của bạn."
+        },
+        {
+          "title": "Quyền & lựa chọn",
+          "body": "Bạn có thể cập nhật thông tin hồ sơ tại trang Cài đặt. Bạn cũng có thể yêu cầu xóa tài khoản và dữ liệu bất cứ lúc nào."
+        }
+      ],
+      "cta": {
+        "requestDeletion": "Yêu cầu xóa dữ liệu",
+        "goSettings": "Đi tới Cài đặt"
+      },
+      "contact": {
+        "title": "Liên hệ",
+        "intro": "Nếu có câu hỏi về Chính sách bảo mật, hãy liên hệ:",
+        "emailLabel": "Email"
+      },
+      "links": {
+        "home": "Trang chủ",
+        "deletion": "Xóa dữ liệu"
+      }
+    },
+    "terms": {
+      "title": "Điều khoản dịch vụ",
+      "intro": "Vui lòng đọc kỹ các điều khoản trước khi sử dụng hnfc.",
+      "sections": [
+        {
+          "title": "1. Chấp nhận điều khoản",
+          "body": "Khi truy cập hoặc sử dụng hnfc, bạn đồng ý tuân theo Điều khoản dịch vụ này. Nếu không đồng ý, vui lòng không sử dụng ứng dụng."
+        },
+        {
+          "title": "2. Mô tả dịch vụ",
+          "body": "hnfc là ứng dụng học tập cho phép tạo, quản lý và học bộ thẻ, ghi chú. Dịch vụ đang ở giai đoạn thử nghiệm, tính năng có thể thay đổi."
+        },
+        {
+          "title": "3. Tài khoản người dùng",
+          "body": "Bạn chịu trách nhiệm bảo mật tài khoản và mọi hoạt động phát sinh. Vui lòng cung cấp thông tin chính xác, đầy đủ khi tạo tài khoản."
+        },
+        {
+          "title": "4. Nội dung người dùng",
+          "body": "Bạn sở hữu nội dung tạo trong hnfc, gồm bộ thẻ, ghi chú, thẻ. Khi dùng dịch vụ, bạn cho phép hnfc lưu trữ và xử lý nội dung này chỉ để cung cấp dịch vụ."
+        },
+        {
+          "title": "5. Sử dụng hợp lệ",
+          "body": "Bạn cam kết không lạm dụng dịch vụ, bao gồm nhưng không giới hạn ở:",
+          "list": [
+            "Cố gắng truy cập trái phép vào hệ thống",
+            "Tải lên nội dung độc hại",
+            "Gây gián đoạn hoặc cản trở dịch vụ"
+          ]
+        },
+        {
+          "title": "6. Chấm dứt",
+          "body": "Chúng tôi có quyền tạm ngưng hoặc chấm dứt truy cập nếu bạn vi phạm Điều khoản. Bạn cũng có thể yêu cầu xóa tài khoản bất kỳ lúc nào."
+        },
+        {
+          "title": "7. Miễn trừ trách nhiệm",
+          "body": "Dịch vụ được cung cấp \"nguyên trạng\" và \"sẵn có\". hnfc không bảo đảm về độ tin cậy, tính sẵn sàng hoặc độ chính xác của dịch vụ."
+        },
+        {
+          "title": "8. Giới hạn trách nhiệm",
+          "body": "Trong phạm vi pháp luật cho phép, hnfc không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp, ngẫu nhiên hoặc hệ quả phát sinh từ việc sử dụng dịch vụ."
+        },
+        {
+          "title": "9. Thay đổi điều khoản",
+          "body": "Chúng tôi có thể cập nhật Điều khoản. Tiếp tục sử dụng sau khi thay đổi đồng nghĩa bạn chấp nhận phiên bản mới."
+        },
+        {
+          "title": "10. Liên hệ",
+          "body": "Nếu có câu hỏi về Điều khoản, vui lòng liên hệ:",
+          "emailLabel": "Email"
+        }
+      ],
+      "cta": {
+        "deleteAccount": "Yêu cầu xóa tài khoản",
+        "viewPrivacy": "Xem Chính sách bảo mật",
+        "home": "Trang chủ",
+        "deletion": "Xóa dữ liệu"
+      }
+    },
+    "deletion": {
+      "title": "Xóa dữ liệu người dùng",
+      "intro": "Yêu cầu xóa vĩnh viễn tài khoản và dữ liệu liên quan.",
+      "options": {
+        "title": "Tùy chọn yêu cầu xóa",
+        "description": "Bạn có thể yêu cầu xóa tài khoản và dữ liệu bằng một trong các cách dưới đây.",
+        "email": {
+          "title": "Cách 1: Email",
+          "description": "Gửi email kèm địa chỉ email đăng nhập.",
+          "to": "Đến",
+          "subject": "Chủ đề",
+          "cta": "Gửi yêu cầu qua email",
+          "subjectText": "Yêu cầu xóa dữ liệu người dùng"
+        },
+        "inApp": {
+          "title": "Cách 2: Trong ứng dụng",
+          "description": "Nếu có, bạn cũng có thể yêu cầu xóa từ trang Cài đặt.",
+          "cta": "Đi tới Cài đặt",
+          "note": "Lưu ý: Nếu không vào được ứng dụng, hãy dùng Cách 1 (Email)."
+        }
+      },
+      "data": {
+        "title": "Dữ liệu sẽ bị xóa",
+        "items": [
+          "Hồ sơ người dùng và thông tin tài khoản",
+          "Bộ thẻ, thẻ/ghi chú và tiến trình học",
+          "Mọi nội dung liên quan lưu trong ứng dụng"
+        ]
+      },
+      "verification": {
+        "title": "Xác minh & thời gian xử lý",
+        "body": "Vì bảo mật, chúng tôi có thể yêu cầu xác minh sở hữu tài khoản. Yêu cầu được xử lý trong <strong>7 ngày làm việc</strong>."
+      },
+      "links": {
+        "title": "Liên kết liên quan",
+        "privacy": "Xem Chính sách bảo mật",
+        "home": "Về trang chủ"
+      },
+      "notice": "Trang này nhằm tuân thủ yêu cầu bảo vệ dữ liệu của Facebook (Meta)."
+    }
+  }
 }

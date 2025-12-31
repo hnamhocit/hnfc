@@ -1,79 +1,82 @@
-'use client'
+"use client";
 
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction } from "react";
+import { useTranslations } from "next-intl";
 
-import { Separator } from '@/components/ui/separator'
+import { Separator } from "@/components/ui/separator";
 import {
-	auth,
-	facebookProvider,
-	githubProvider,
-	googleProvider,
-	signInWithPopup,
-} from '@/config'
-import { upsertUser } from '@/utils/upsertUser'
-import SocialButton from './SocialButton'
+  auth,
+  facebookProvider,
+  githubProvider,
+  googleProvider,
+  signInWithPopup,
+} from "@/config";
+import { upsertUser } from "@/utils/upsertUser";
+import SocialButton from "./SocialButton";
 
 interface ProvidersProps {
-	disabled: boolean
-	setDisabled: Dispatch<SetStateAction<boolean>>
+  disabled: boolean;
+  setDisabled: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function Providers({ disabled, setDisabled }: ProvidersProps) {
-	const getProvider = (provider: 'github' | 'google' | 'facebook') => {
-		if (provider === 'github') return githubProvider
-		if (provider === 'google') return googleProvider
-		return facebookProvider
-	}
+  const t = useTranslations("auth.providers");
 
-	const signInWithProvider = async (
-		provider: 'github' | 'google' | 'facebook',
-	) => {
-		setDisabled(true)
+  const getProvider = (provider: "github" | "google" | "facebook") => {
+    if (provider === "github") return githubProvider;
+    if (provider === "google") return googleProvider;
+    return facebookProvider;
+  };
 
-		try {
-			const _provider = getProvider(provider)
+  const signInWithProvider = async (
+    provider: "github" | "google" | "facebook",
+  ) => {
+    setDisabled(true);
 
-			const { user } = await signInWithPopup(auth, _provider)
-			await upsertUser(user)
-		} catch (error) {
-			console.error('Error during sign-in with provider:', error)
-		} finally {
-			setDisabled(false)
-		}
-	}
+    try {
+      const _provider = getProvider(provider);
 
-	return (
-		<>
-			<div className='grid grid-cols-3 gap-4 mb-6'>
-				<SocialButton
-					icon='/providers/github.png'
-					label='Github'
-					disabled={disabled}
-					onClick={() => signInWithProvider('github')}
-				/>
+      const { user } = await signInWithPopup(auth, _provider);
+      await upsertUser(user);
+    } catch (error) {
+      console.error("Error during sign-in with provider:", error);
+    } finally {
+      setDisabled(false);
+    }
+  };
 
-				<SocialButton
-					icon='/providers/facebook.png'
-					label='Facebook'
-					disabled={disabled}
-					onClick={() => signInWithProvider('facebook')}
-				/>
+  return (
+    <>
+      <div className="grid grid-cols-3 gap-4 mb-6">
+        <SocialButton
+          icon="/providers/github.png"
+          label={t("github")}
+          disabled={disabled}
+          onClick={() => signInWithProvider("github")}
+        />
 
-				<SocialButton
-					icon='/providers/google.webp'
-					label='Google'
-					disabled={disabled}
-					onClick={() => signInWithProvider('google')}
-				/>
-			</div>
+        <SocialButton
+          icon="/providers/facebook.png"
+          label={t("facebook")}
+          disabled={disabled}
+          onClick={() => signInWithProvider("facebook")}
+        />
 
-			<div className='flex items-center gap-4 mb-6'>
-				<Separator className='flex-1' />
-				<span className='text-xs font-medium text-muted-foreground uppercase'>
-					Or Email
-				</span>
-				<Separator className='flex-1' />
-			</div>
-		</>
-	)
+        <SocialButton
+          icon="/providers/google.webp"
+          label={t("google")}
+          disabled={disabled}
+          onClick={() => signInWithProvider("google")}
+        />
+      </div>
+
+      <div className="flex items-center gap-4 mb-6">
+        <Separator className="flex-1" />
+        <span className="text-xs font-medium text-muted-foreground uppercase">
+          {t("orEmail")}
+        </span>
+        <Separator className="flex-1" />
+      </div>
+    </>
+  );
 }

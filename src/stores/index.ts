@@ -1,3 +1,3 @@
-export * from './deckOptions'
-export * from './locale.store'
-export * from './user.store'
+export * from "./deckOptions";
+export * from "./locale.store";
+export * from "./user.store";

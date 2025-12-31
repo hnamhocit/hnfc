@@ -1,203 +1,229 @@
-'use client'
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Trash2 } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import { Controller, useForm } from 'react-hook-form'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Trash2 } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import type { ZodErrorMap } from "zod";
 
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/card'
-import { DeckInput, deckSchema } from '@/schemas'
-import { deckService } from '@/services'
-import ColorPicker from './ColorPicker'
-import Description from './Description'
-import Tags from './Tags'
-import Title from './Title'
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { DeckInput, deckSchema } from "@/schemas";
+import { deckService } from "@/services";
+import ColorPicker from "./ColorPicker";
+import Description from "./Description";
+import Tags from "./Tags";
+import Title from "./Title";
 
 export function DeckForm({ deckId }: { deckId?: string }) {
-	const isEdit = !!deckId
+  const tDeckForm = useTranslations("deckForm");
+  const tCommon = useTranslations("common");
+  const isEdit = !!deckId;
 
-	const [loading, setLoading] = useState(!!deckId)
-	const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(!!deckId);
+  const [error, setError] = useState<string | null>(null);
 
-	const form = useForm<DeckInput>({
-		resolver: zodResolver(deckSchema),
-		defaultValues: {
-			title: '',
-			color: '#3b82f6',
-			tags: [],
-			description: '',
-		},
-		mode: 'onBlur',
-		reValidateMode: 'onChange',
-	})
+  const deckErrorMap: ZodErrorMap = (issue, ctx) => {
+    const field = issue.path[0];
 
-	const {
-		control,
-		reset,
-		handleSubmit,
-		formState: { errors, isSubmitting },
-	} = form
+    if (field === "title") {
+      if (issue.code === "too_small")
+        return { message: tDeckForm("validation.titleRequired") };
+      if (issue.code === "too_big")
+        return { message: tDeckForm("validation.titleMax") };
+    }
 
-	useEffect(() => {
-		if (!deckId) return
-		let cancelled = false
+    if (field === "description" && issue.code === "too_big")
+      return { message: tDeckForm("validation.descriptionMax") };
 
-		;(async () => {
-			setLoading(true)
-			setError(null)
-			try {
-				const deck = await deckService.getById(deckId)
-				if (cancelled) return
+    if (field === "tags" && issue.code === "too_big")
+      return { message: tDeckForm("validation.tagMax") };
 
-				reset({
-					title: deck.title ?? '',
-					color: deck.color ?? '#3b82f6',
-					tags: deck.tags ?? [],
-					description: deck.description ?? '',
-				})
-			} catch (e: any) {
-				if (!cancelled) setError(e?.message ?? 'Failed to load deck')
-			} finally {
-				if (!cancelled) setLoading(false)
-			}
-		})()
+    if (
+      field === "color" &&
+      issue.code === "invalid_string" &&
+      issue.validation === "regex"
+    )
+      return { message: tDeckForm("validation.color") };
 
-		return () => {
-			cancelled = true
-		}
-	}, [deckId, reset])
+    return { message: ctx.defaultError };
+  };
 
-	const onReset = () => {
-		reset({
-			title: '',
-			color: '#3b82f6',
-			tags: [],
-			description: '',
-		})
+  const form = useForm<DeckInput>({
+    resolver: zodResolver(deckSchema, { errorMap: deckErrorMap }),
+    defaultValues: {
+      title: "",
+      color: "#3b82f6",
+      tags: [],
+      description: "",
+    },
+    mode: "onBlur",
+    reValidateMode: "onChange",
+  });
 
-		setError(null)
-	}
+  const {
+    control,
+    reset,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = form;
 
-	const onSubmit = handleSubmit(async (values) => {
-		setError(null)
+  useEffect(() => {
+    if (!deckId) return;
+    let cancelled = false;
 
-		try {
-			isEdit
-				? await deckService.update(deckId!, values)
-				: await deckService.create(values)
+    (async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const deck = await deckService.getById(deckId);
+        if (cancelled) return;
 
-			onReset()
-		} catch (e: any) {
-			setError(e?.message ?? 'Save failed')
-		}
-	})
+        reset({
+          title: deck.title ?? "",
+          color: deck.color ?? "#3b82f6",
+          tags: deck.tags ?? [],
+          description: deck.description ?? "",
+        });
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message ?? tDeckForm("errors.load"));
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
 
-	return (
-		<Card className='rounded-2xl'>
-			<CardHeader>
-				<div className='flex items-start justify-between gap-4 flex-wrap'>
-					<div className='flex items-center gap-4 flex-wrap'>
-						<div>
-							<CardTitle className='text-2xl'>
-								{isEdit ? 'Edit deck' : 'Create a deck'}
-							</CardTitle>
+    return () => {
+      cancelled = true;
+    };
+  }, [deckId, reset, tDeckForm]);
 
-							<CardDescription className='md:text-lg'>
-								{isEdit
-									? `Editing deck: ${deckId}`
-									: 'Write like a blog: borderless title + live markdown description.'}
-							</CardDescription>
-						</div>
-					</div>
+  const onReset = () => {
+    reset({
+      title: "",
+      color: "#3b82f6",
+      tags: [],
+      description: "",
+    });
 
-					<div className='flex items-center gap-2'>
-						<Button
-							variant='secondary'
-							onClick={onReset}
-							className='rounded-xl'
-							disabled={loading || isSubmitting}>
-							<Trash2 className='mr-2 h-4 w-4' />
-							Reset
-						</Button>
+    setError(null);
+  };
 
-						<Button
-							onClick={onSubmit}
-							className='rounded-xl'
-							disabled={loading || isSubmitting}>
-							{isSubmitting ? 'Saving…' : 'Save'}
-						</Button>
-					</div>
-				</div>
+  const onSubmit = handleSubmit(async (values) => {
+    setError(null);
 
-				{error ? (
-					<div className='mt-3 rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive'>
-						{error}
-					</div>
-				) : null}
-			</CardHeader>
+    try {
+      isEdit
+        ? await deckService.update(deckId!, values)
+        : await deckService.create(values);
 
-			<CardContent className='space-y-8'>
-				{loading ? (
-					<div className='text-sm text-muted-foreground'>
-						Loading deck…
-					</div>
-				) : (
-					<>
-						<Controller
-							control={control}
-							name='title'
-							render={({ field }) => (
-								<Title
-									value={field.value}
-									onChange={field.onChange}
-									error={errors.title?.message}
-								/>
-							)}
-						/>
+      onReset();
+    } catch (e: any) {
+      setError(e?.message ?? tDeckForm("errors.save"));
+    }
+  });
 
-						<Controller
-							control={control}
-							name='color'
-							render={({ field }) => (
-								<ColorPicker
-									value={field.value}
-									onChange={field.onChange}
-								/>
-							)}
-						/>
+  return (
+    <Card className="rounded-2xl">
+      <CardHeader>
+        <div className="flex items-start justify-between gap-4 flex-wrap">
+          <div className="flex items-center gap-4 flex-wrap">
+            <div>
+              <CardTitle className="text-2xl">
+                {isEdit ? tDeckForm("title.edit") : tDeckForm("title.create")}
+              </CardTitle>
 
-						<Controller
-							control={control}
-							name='tags'
-							render={({ field }) => (
-								<Tags
-									tags={field.value!}
-									setTags={field.onChange}
-								/>
-							)}
-						/>
+              <CardDescription className="md:text-lg">
+                {isEdit
+                  ? tDeckForm("subtitle.edit", { deckId })
+                  : tDeckForm("subtitle.create")}
+              </CardDescription>
+            </div>
+          </div>
 
-						<Controller
-							control={control}
-							name='description'
-							render={({ field }) => (
-								<Description
-									value={field.value!}
-									onChange={field.onChange}
-									error={errors.description?.message}
-								/>
-							)}
-						/>
-					</>
-				)}
-			</CardContent>
-		</Card>
-	)
+          <div className="flex items-center gap-2">
+            <Button
+              variant="secondary"
+              onClick={onReset}
+              className="rounded-xl"
+              disabled={loading || isSubmitting}
+            >
+              <Trash2 className="mr-2 h-4 w-4" />
+              {tDeckForm("actions.reset")}
+            </Button>
+
+            <Button
+              onClick={onSubmit}
+              className="rounded-xl"
+              disabled={loading || isSubmitting}
+            >
+              {isSubmitting ? tCommon("saving") : tDeckForm("actions.save")}
+            </Button>
+          </div>
+        </div>
+
+        {error ? (
+          <div className="mt-3 rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive">
+            {error}
+          </div>
+        ) : null}
+      </CardHeader>
+
+      <CardContent className="space-y-8">
+        {loading ? (
+          <div className="text-sm text-muted-foreground">
+            {tDeckForm("actions.loading")}
+          </div>
+        ) : (
+          <>
+            <Controller
+              control={control}
+              name="title"
+              render={({ field }) => (
+                <Title
+                  value={field.value}
+                  onChange={field.onChange}
+                  error={errors.title?.message}
+                />
+              )}
+            />
+
+            <Controller
+              control={control}
+              name="color"
+              render={({ field }) => (
+                <ColorPicker value={field.value} onChange={field.onChange} />
+              )}
+            />
+
+            <Controller
+              control={control}
+              name="tags"
+              render={({ field }) => (
+                <Tags tags={field.value!} setTags={field.onChange} />
+              )}
+            />
+
+            <Controller
+              control={control}
+              name="description"
+              render={({ field }) => (
+                <Description
+                  value={field.value!}
+                  onChange={field.onChange}
+                  error={errors.description?.message}
+                />
+              )}
+            />
+          </>
+        )}
+      </CardContent>
+    </Card>
+  );
 }

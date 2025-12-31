@@ -1,37 +1,40 @@
-import TextareaAutosize from 'react-textarea-autosize'
+import { useTranslations } from "next-intl";
+import TextareaAutosize from "react-textarea-autosize";
 
-import MarkdownLive from '@/components/MarkdownLive'
-import { Field, FieldError, FieldLabel } from '@/components/ui/field'
+import MarkdownLive from "@/components/MarkdownLive";
+import { Field, FieldError, FieldLabel } from "@/components/ui/field";
 
 interface DescriptionProps {
-	value: string
-	onChange: (value: string) => void
-	error?: string
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
 }
 
 export default function Description({
-	value,
-	onChange,
-	error,
+  value,
+  onChange,
+  error,
 }: DescriptionProps) {
-	return (
-		<Field>
-			<FieldLabel className='text-xs text-muted-foreground'>
-				Description (Markdown)
-			</FieldLabel>
+  const t = useTranslations("deckForm.fields.description");
 
-			<FieldError>{error}</FieldError>
+  return (
+    <Field>
+      <FieldLabel className="text-xs text-muted-foreground">
+        {t("label")}
+      </FieldLabel>
 
-			<TextareaAutosize
-				value={value}
-				onChange={(e) => onChange(e.target.value)}
-				className='resize-none outline-none'
-				placeholder='Enter description...'
-			/>
+      <FieldError>{error}</FieldError>
 
-			<div className='pt-3'>
-				<MarkdownLive value={value} />
-			</div>
-		</Field>
-	)
+      <TextareaAutosize
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="resize-none outline-none"
+        placeholder={t("placeholder")}
+      />
+
+      <div className="pt-3">
+        <MarkdownLive value={value} />
+      </div>
+    </Field>
+  );
 }

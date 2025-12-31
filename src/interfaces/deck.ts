@@ -1,18 +1,18 @@
-import { IDocument } from './document'
+import { IDocument } from "./document";
 
 export interface IDeck extends IDocument {
-	title: string
-	description: string
-	tags: string[]
-	color: string
+  title: string;
+  description: string;
+  tags: string[];
+  color: string;
 
-	ownerId: string
+  ownerId: string;
 }
 
 export interface IDeckStats {
-	totalCards: number
-	dueCards: number
-	progress: number
+  totalCards: number;
+  dueCards: number;
+  progress: number;
 }
 
-export type IDeckWithStats = IDeck & IDeckStats
+export type IDeckWithStats = IDeck & IDeckStats;
