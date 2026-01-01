@@ -21,8 +21,8 @@ export default function SignUpForm({ disabled, setDisabled }: SignUpFormProps) {
   const tSignUp = useTranslations("auth.signUp");
   const tValidation = useTranslations("auth.validation");
 
-  const registerErrorMap: ZodErrorMap = (issue, ctx) => {
-    const field = issue.path[0];
+  const registerErrorMap: ZodErrorMap = (issue) => {
+    const field = issue.path?.[0];
 
     if (field === "displayName") {
       if (issue.code === "too_small")
@@ -39,11 +39,11 @@ export default function SignUpForm({ disabled, setDisabled }: SignUpFormProps) {
       if (issue.code === "too_small")
         return { message: tValidation("passwordRequired") };
 
-      if (issue.code === "invalid_string" && issue.validation === "regex")
+      if (issue.code === "invalid_format" && issue.format === "regex")
         return { message: tValidation("passwordRules") };
     }
 
-    return { message: ctx.defaultError };
+    return { message: issue.message ?? "Invalid value" };
   };
 
   const {
@@ -52,7 +52,7 @@ export default function SignUpForm({ disabled, setDisabled }: SignUpFormProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<RegisterInput>({
-    resolver: zodResolver(registerSchema, { errorMap: registerErrorMap }),
+    resolver: zodResolver(registerSchema, { error: registerErrorMap }),
     defaultValues: {
       displayName: "",
       email: "",

@@ -30,8 +30,8 @@ export function DeckForm({ deckId }: { deckId?: string }) {
   const [loading, setLoading] = useState(!!deckId);
   const [error, setError] = useState<string | null>(null);
 
-  const deckErrorMap: ZodErrorMap = (issue, ctx) => {
-    const field = issue.path[0];
+  const deckErrorMap: ZodErrorMap = (issue) => {
+    const field = issue.path?.[0];
 
     if (field === "title") {
       if (issue.code === "too_small")
@@ -48,16 +48,16 @@ export function DeckForm({ deckId }: { deckId?: string }) {
 
     if (
       field === "color" &&
-      issue.code === "invalid_string" &&
-      issue.validation === "regex"
+      issue.code === "invalid_format" &&
+      issue.format === "regex"
     )
       return { message: tDeckForm("validation.color") };
 
-    return { message: ctx.defaultError };
+    return { message: issue.message ?? "Invalid value" };
   };
 
   const form = useForm<DeckInput>({
-    resolver: zodResolver(deckSchema, { errorMap: deckErrorMap }),
+    resolver: zodResolver(deckSchema, { error: deckErrorMap }),
     defaultValues: {
       title: "",
       color: "#3b82f6",

@@ -35,9 +35,9 @@ export default function Tags({ tags, setTags }: TagsProps) {
     }
   };
 
-  const removeTag = (t: string) => {
+  const removeTag = (tag: string) => {
     const next = (tags ?? []).filter(
-      (x) => x.toLowerCase() !== t.toLowerCase(),
+      (x) => x.toLowerCase() !== tag.toLowerCase(),
     );
 
     setTags(next);
@@ -52,15 +52,19 @@ export default function Tags({ tags, setTags }: TagsProps) {
           {tags.length === 0 ? (
             <span className="text-sm text-muted-foreground">{t("empty")}</span>
           ) : (
-            tags.map((t) => (
-              <Badge key={t} variant="secondary" className="gap-1 rounded-xl">
+            tags.map((tag) => (
+              <Badge
+                key={tag}
+                variant="secondary"
+                className="gap-1 rounded-xl"
+              >
                 <TagIcon className="h-3.5 w-3.5" />
-                {t}
+                {tag}
                 <button
                   type="button"
                   className="ml-1 rounded-full p-0.5 hover:bg-muted"
-                  onClick={() => removeTag(t)}
-                  aria-label={t("remove", { tag: t })}
+                  onClick={() => removeTag(tag)}
+                  aria-label={t("remove", { tag })}
                 >
                   <XIcon className="h-3.5 w-3.5" />
                 </button>

@@ -1,752 +1,719 @@
 {
-  "home": {
-    "nav": {
-      "features": "Features",
-      "howItWorks": "How it works",
-      "useCases": "Use cases",
-      "pricing": "Pricing",
-      "signIn": "Sign in",
-      "getStarted": "Get started"
-    },
+	"home": {
+		"nav": {
+			"features": "Features",
+			"howItWorks": "How it works",
+			"useCases": "Use cases",
+			"pricing": "Pricing",
+			"signIn": "Sign in",
+			"getStarted": "Get started"
+		},
 
-    "hero": {
-      "badge": {
-        "minimal": "Minimal",
-        "fastReviews": "Fast reviews",
-        "crossPlatform": "Cross-platform"
-      },
-      "title": {
-        "line1": "Learn faster with ",
-        "line2": "intelligent flashcards."
-      },
-      "description": "hnfc is a cross-platform app designed for focus. Create decks instantly, review with spaced repetition, and build lasting memory—without the clutter.",
-      "cta": {
-        "primary": "Start Learning Free",
-        "secondary": "See Features"
-      },
-      "stats": {
-        "activeUsers": "active users",
-        "cardsReviewed": "cards reviewed",
-        "rating": "rating"
-      },
-      "session": {
-        "header": {
-          "title": "Session: Advanced C++",
-          "live": "Live"
-        },
-        "tag": {
-          "definition": "Definition"
-        },
-        "content": {
-          "question": "What does \"alignment\" mean in C structs?",
-          "hint": "Hint: Think about CPU cycles and memory padding."
-        },
-        "meta": {
-          "spaceToFlip": "Space to flip",
-          "rateShortcut": "1-4 to rate"
-        },
-        "actions": {
-          "again": "Again (1m)",
-          "good": "Good (1d)"
-        },
-        "streak": {
-          "days": "12 Days",
-          "label": "Current Streak"
-        }
-      }
-    },
+		"hero": {
+			"badge": {
+				"minimal": "Minimal",
+				"fastReviews": "Fast reviews",
+				"crossPlatform": "Cross-platform"
+			},
+			"title": {
+				"line1": "Learn faster with ",
+				"line2": "intelligent flashcards."
+			},
+			"description": "hnfc is a cross-platform app designed for focus. Create decks instantly, review with spaced repetition, and build lasting memory—without the clutter.",
+			"cta": {
+				"primary": "Start Learning Free",
+				"secondary": "See Features"
+			},
+			"stats": {
+				"activeUsers": "active users",
+				"cardsReviewed": "cards reviewed",
+				"rating": "rating"
+			},
+			"session": {
+				"header": {
+					"title": "Session: Advanced C++",
+					"live": "Live"
+				},
+				"tag": {
+					"definition": "Definition"
+				},
+				"content": {
+					"question": "What does \"alignment\" mean in C structs?",
+					"hint": "Hint: Think about CPU cycles and memory padding."
+				},
+				"meta": {
+					"spaceToFlip": "Space to flip",
+					"rateShortcut": "1-4 to rate"
+				},
+				"actions": {
+					"again": "Again (1m)",
+					"good": "Good (1d)"
+				},
+				"streak": {
+					"days": "12 Days",
+					"label": "Current Streak"
+				}
+			}
+		},
 
-    "categories": {
-      "computerScience": "Computer Science",
-      "medical": "Medical",
-      "law": "Law",
-      "languages": "Languages",
-      "history": "History",
-      "geography": "Geography"
-    },
+		"categories": {
+			"computerScience": "Computer Science",
+			"medical": "Medical",
+			"law": "Law",
+			"languages": "Languages",
+			"history": "History",
+			"geography": "Geography"
+		},
 
-    "features": {
-      "headline": {
-        "title": "Everything you need to ",
-        "highlight": "master any subject.",
-        "description": "Powerful tools designed to help you build a consistent study habit without the friction.",
-        "cta": "Explore all features"
-      },
-      "items": {
-        "createFast": {
-          "title": "Create decks fast",
-          "description": "Build flashcards in seconds with a clean editor and smart defaults."
-        },
-        "studySmarter": {
-          "title": "Study smarter",
-          "description": "Spaced repetition-inspired flow to help you remember longer."
-        },
-        "crossPlatform": {
-          "title": "Cross-platform",
-          "description": "Use hnfc on any device. Your progress stays with you."
-        },
-        "keyboardFriendly": {
-          "title": "Keyboard-friendly",
-          "description": "Speed through reviews using hotkeys for a focused workflow."
-        },
-        "tagsSearch": {
-          "title": "Tags & search",
-          "description": "Organize decks with tags and find cards instantly."
-        },
-        "progressTracking": {
-          "title": "Progress tracking",
-          "description": "See streaks, accuracy, and review volume at a glance."
-        }
-      }
-    },
+		"features": {
+			"headline": {
+				"title": "Everything you need to ",
+				"highlight": "master any subject.",
+				"description": "Powerful tools designed to help you build a consistent study habit without the friction.",
+				"cta": "Explore all features"
+			},
+			"items": {
+				"createFast": {
+					"title": "Create decks fast",
+					"description": "Build flashcards in seconds with a clean editor and smart defaults."
+				},
+				"studySmarter": {
+					"title": "Study smarter",
+					"description": "Spaced repetition-inspired flow to help you remember longer."
+				},
+				"crossPlatform": {
+					"title": "Cross-platform",
+					"description": "Use hnfc on any device. Your progress stays with you."
+				},
+				"keyboardFriendly": {
+					"title": "Keyboard-friendly",
+					"description": "Speed through reviews using hotkeys for a focused workflow."
+				},
+				"tagsSearch": {
+					"title": "Tags & search",
+					"description": "Organize decks with tags and find cards instantly."
+				},
+				"progressTracking": {
+					"title": "Progress tracking",
+					"description": "See streaks, accuracy, and review volume at a glance."
+				}
+			}
+		},
 
-    "howItWorks": {
-      "title": "How it works",
-      "subtitle": "Three simple steps to get into a daily learning groove.",
-      "steps": {
-        "create": {
-          "title": "Create",
-          "description": "Add cards manually or import from CSV."
-        },
-        "review": {
-          "title": "Review",
-          "description": "Short daily sessions using smart recall."
-        },
-        "master": {
-          "title": "Master",
-          "description": "Track progress and refine weak areas."
-        }
-      }
-    },
+		"howItWorks": {
+			"title": "How it works",
+			"subtitle": "Three simple steps to get into a daily learning groove.",
+			"steps": {
+				"create": {
+					"title": "Create",
+					"description": "Add cards manually or import from CSV."
+				},
+				"review": {
+					"title": "Review",
+					"description": "Short daily sessions using smart recall."
+				},
+				"master": {
+					"title": "Master",
+					"description": "Track progress and refine weak areas."
+				}
+			}
+		},
 
-    "useCases": {
-      "title": "Use Cases",
-      "subtitle": "Perfect for any type of learner.",
-      "items": {
-        "languages": {
-          "tag": "Languages",
-          "title": "Language learning",
-          "description": "Vocabulary, phrases, and pronunciation drills."
-        },
-        "students": {
-          "tag": "Students",
-          "title": "Exam prep",
-          "description": "Definitions, formulas, and quick recall practice."
-        },
-        "career": {
-          "tag": "Career",
-          "title": "Tech & interviews",
-          "description": "Concepts, system design, and common Q&A."
-        },
-        "pro": {
-          "tag": "Pro",
-          "title": "Medical / law",
-          "description": "Dense knowledge made reviewable and consistent."
-        }
-      }
-    },
+		"useCases": {
+			"title": "Use Cases",
+			"subtitle": "Perfect for any type of learner.",
+			"items": {
+				"languages": {
+					"tag": "Languages",
+					"title": "Language learning",
+					"description": "Vocabulary, phrases, and pronunciation drills."
+				},
+				"students": {
+					"tag": "Students",
+					"title": "Exam prep",
+					"description": "Definitions, formulas, and quick recall practice."
+				},
+				"career": {
+					"tag": "Career",
+					"title": "Tech & interviews",
+					"description": "Concepts, system design, and common Q&A."
+				},
+				"pro": {
+					"tag": "Pro",
+					"title": "Medical / law",
+					"description": "Dense knowledge made reviewable and consistent."
+				}
+			}
+		},
 
-    "testimonials": {
-      "title": "Loved by learners",
-      "items": [
-        {
-          "quote": "Clean UI. I can review daily without feeling overwhelmed.",
-          "name": "Minh T.",
-          "role": "Student"
-        },
-        {
-          "quote": "Hotkeys + quick sessions helped me keep a streak.",
-          "name": "Lan P.",
-          "role": "Language learner"
-        },
-        {
-          "quote": "Perfect for interview prep. Decks are easy to organize.",
-          "name": "Huy N.",
-          "role": "Software engineer"
-        }
-      ]
-    },
+		"testimonials": {
+			"title": "Loved by learners",
+			"items": [
+				{
+					"quote": "Clean UI. I can review daily without feeling overwhelmed.",
+					"name": "Minh T.",
+					"role": "Student"
+				},
+				{
+					"quote": "Hotkeys + quick sessions helped me keep a streak.",
+					"name": "Lan P.",
+					"role": "Language learner"
+				},
+				{
+					"quote": "Perfect for interview prep. Decks are easy to organize.",
+					"name": "Huy N.",
+					"role": "Software engineer"
+				}
+			]
+		},
 
-    "pricing": {
-      "title": "Simple, transparent pricing.",
-      "subtitle": "Start for free, upgrade when you need more storage or offline powers.",
-      "plans": {
-        "free": {
-          "name": "Free",
-          "price": "$0",
-          "description": "Perfect for casual learners getting started.",
-          "features": [
-            "Unlimited text cards",
-            "5 decks maximum",
-            "Basic progress stats",
-            "Sync across 2 devices",
-            "Community support"
-          ],
-          "limitations": [
-            "No image uploads",
-            "No offline mode",
-            "Limited stats & heatmaps"
-          ],
-          "cta": "Start Learning"
-        },
-        "plus": {
-          "badge": "Most Popular",
-          "name": "Plus",
-          "price": "$4",
-          "description": "Remove limits and unlock media support.",
-          "features": [
-            "Unlimited decks & cards",
-            "Image uploads (500MB storage)",
-            "Offline study mode",
-            "Sync unlimited devices",
-            "Advanced heatmaps & stats",
-            "Ad-free experience"
-          ],
-          "period": "/month",
-          "cta": "Go Plus"
-        },
-        "pro": {
-          "name": "Pro",
-          "price": "$8",
-          "description": "For power users with heavy media needs.",
-          "features": [
-            "Everything in Plus",
-            "5GB media storage",
-            "Audio recording/uploads",
-            "Priority email support",
-            "Early access to beta features",
-            "Export data to CSV/Anki"
-          ],
-          "period": "/month",
-          "cta": "Get Pro"
-        }
-      }
-    },
+		"pricing": {
+			"title": "Simple, transparent pricing.",
+			"subtitle": "Start for free, upgrade when you need more storage or offline powers.",
+			"plans": {
+				"free": {
+					"name": "Free",
+					"price": "$0",
+					"description": "Perfect for casual learners getting started.",
+					"features": [
+						"Unlimited text cards",
+						"5 decks maximum",
+						"Basic progress stats",
+						"Sync across 2 devices",
+						"Community support"
+					],
+					"limitations": [
+						"No image uploads",
+						"No offline mode",
+						"Limited stats & heatmaps"
+					],
+					"cta": "Start Learning"
+				},
+				"plus": {
+					"badge": "Most Popular",
+					"name": "Plus",
+					"price": "$4",
+					"description": "Remove limits and unlock media support.",
+					"features": [
+						"Unlimited decks & cards",
+						"Image uploads (500MB storage)",
+						"Offline study mode",
+						"Sync unlimited devices",
+						"Advanced heatmaps & stats",
+						"Ad-free experience"
+					],
+					"period": "/month",
+					"cta": "Go Plus"
+				},
+				"pro": {
+					"name": "Pro",
+					"price": "$8",
+					"description": "For power users with heavy media needs.",
+					"features": [
+						"Everything in Plus",
+						"5GB media storage",
+						"Audio recording/uploads",
+						"Priority email support",
+						"Early access to beta features",
+						"Export data to CSV/Anki"
+					],
+					"period": "/month",
+					"cta": "Get Pro"
+				}
+			}
+		},
 
-    "faqs": {
-      "title": "Frequently asked questions",
-      "subtitle": "Can’t find the answer you’re looking for? Reach out to our {supportLink} team.",
-      "support": "customer support",
-      "items": [
-        {
-          "question": "Why is there a paid plan?",
-          "answer": "hnfc uses premium cloud infrastructure (Firebase) to ensure your data is synced instantly and securely across all devices. The paid plans help cover these server and storage costs so we can keep the app fast and reliable without selling your data."
-        },
-        {
-          "question": "Is the Free plan really free forever?",
-          "answer": "Yes! If you only need text-based flashcards and don’t need to upload heavy images, the Free plan is generous enough for most students. We will never delete your data just because you are on the Free tier."
-        },
-        {
-          "question": "Can I use it offline?",
-          "answer": "Offline mode is available on the Plus and Pro plans. It allows you to review your decks even without an internet connection, and changes will sync automatically once you are back online."
-        },
-        {
-          "question": "What happens to my data if I cancel?",
-          "answer": "Your data is yours. If you cancel a paid subscription, your account will revert to the Free tier limits. You won’t lose your text cards, but you may need to free up storage space if you are over the limit."
-        },
-        {
-          "question": "Do you offer student discounts?",
-          "answer": "Yes! We offer 50% off the Plus plan for students with a valid .edu email address. Contact support after signing up to apply."
-        }
-      ]
-    },
+		"faqs": {
+			"title": "Frequently asked questions",
+			"subtitle": "Can’t find the answer you’re looking for? Reach out to our {supportLink} team.",
+			"support": "customer support",
+			"items": [
+				{
+					"question": "Why is there a paid plan?",
+					"answer": "hnfc uses premium cloud infrastructure (Firebase) to ensure your data is synced instantly and securely across all devices. The paid plans help cover these server and storage costs so we can keep the app fast and reliable without selling your data."
+				},
+				{
+					"question": "Is the Free plan really free forever?",
+					"answer": "Yes! If you only need text-based flashcards and don’t need to upload heavy images, the Free plan is generous enough for most students. We will never delete your data just because you are on the Free tier."
+				},
+				{
+					"question": "Can I use it offline?",
+					"answer": "Offline mode is available on the Plus and Pro plans. It allows you to review your decks even without an internet connection, and changes will sync automatically once you are back online."
+				},
+				{
+					"question": "What happens to my data if I cancel?",
+					"answer": "Your data is yours. If you cancel a paid subscription, your account will revert to the Free tier limits. You won’t lose your text cards, but you may need to free up storage space if you are over the limit."
+				},
+				{
+					"question": "Do you offer student discounts?",
+					"answer": "Yes! We offer 50% off the Plus plan for students with a valid .edu email address. Contact support after signing up to apply."
+				}
+			]
+		},
 
-    "cta": {
-      "title": "Start your streak today.",
-      "description": "Join thousands of students and professionals learning more efficiently. Free to start, no credit card required.",
-      "button": "Create Free Account",
-      "note": "Includes 30-day trial of Pro features"
-    },
+		"cta": {
+			"title": "Start your streak today.",
+			"description": "Join thousands of students and professionals learning more efficiently. Free to start, no credit card required.",
+			"button": "Create Free Account",
+			"note": "Includes 30-day trial of Pro features"
+		},
 
-    "footer": {
-      "description": "The smart flashcard app for serious learners. Master any subject with ease.",
-      "product": {
-        "title": "Product",
-        "items": ["Features", "Pricing", "Download", "Changelog"]
-      },
-      "resources": {
-        "title": "Resources",
-        "items": ["Blog", "Community", "Help Center", "API Docs"]
-      },
-      "newsletter": {
-        "title": "Stay updated",
-        "placeholder": "Enter your email",
-        "button": "Subscribe"
-      },
-      "legal": {
-        "copyright": "© 2025 hnfc Inc. All rights reserved.",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
-      }
-    }
-  },
+		"footer": {
+			"description": "The smart flashcard app for serious learners. Master any subject with ease.",
+			"product": {
+				"title": "Product",
+				"items": ["Features", "Pricing", "Download", "Changelog"]
+			},
+			"resources": {
+				"title": "Resources",
+				"items": ["Blog", "Community", "Help Center", "API Docs"]
+			},
+			"newsletter": {
+				"title": "Stay updated",
+				"placeholder": "Enter your email",
+				"button": "Subscribe"
+			},
+			"legal": {
+				"copyright": "© 2025 hnfc Inc. All rights reserved.",
+				"privacy": "Privacy Policy",
+				"terms": "Terms of Service"
+			}
+		}
+	},
 
-  "menu": {
-    "add": "Add",
-    "profile": "Profile",
-    "notifications": "Notifications",
-    "settings": "Settings",
-    "logout": "Logout"
-  },
+	"menu": {
+		"add": "Add",
+		"profile": "Profile",
+		"notifications": "Notifications",
+		"settings": "Settings",
+		"logout": "Logout"
+	},
 
-  "common": {
-    "back": "Back",
-    "cancel": "Cancel",
-    "create": "Create",
-    "delete": "Delete",
-    "dueDate": "Due date",
-    "edit": "Edit",
-    "failedToSave": "Failed to save",
-    "loading": "Loading...",
-    "logoAlt": "hnfc logo",
-    "more": "More",
-    "userAvatar": "User avatar",
-    "retry": "Retry",
-    "repetitions": "Repetitions",
-    "save": "Save",
-    "saveChanges": "Save changes",
-    "saved": "Saved",
-    "saving": "Saving..."
-  },
+	"common": {
+		"back": "Back",
+		"cancel": "Cancel",
+		"create": "Create",
+		"delete": "Delete",
+		"dueDate": "Due date",
+		"edit": "Edit",
+		"failedToSave": "Failed to save",
+		"loading": "Loading...",
+		"logoAlt": "hnfc logo",
+		"more": "More",
+		"userAvatar": "User avatar",
+		"retry": "Retry",
+		"repetitions": "Repetitions",
+		"save": "Save",
+		"saveChanges": "Save changes",
+		"saved": "Saved",
+		"saving": "Saving..."
+	},
 
-  "settings": {
-    "heading": "Profile settings",
-    "subtitle": "Update profile",
-    "displayName": "Display name",
-    "photoUrl": "Photo URL",
-    "photoHint": "Paste image URL. Leave empty if not using an avatar.",
-    "displayNamePlaceholder": "Your name",
-    "photoUrlPlaceholder": "https://...",
-    "preview": "Preview",
-    "photoPreviewAlt": "preview"
-  },
+	"settings": {
+		"heading": "Profile settings",
+		"subtitle": "Update profile",
+		"displayName": "Display name",
+		"photoUrl": "Photo URL",
+		"photoHint": "Paste image URL. Leave empty if not using an avatar.",
+		"displayNamePlaceholder": "Your name",
+		"photoUrlPlaceholder": "https://...",
+		"preview": "Preview",
+		"photoPreviewAlt": "preview"
+	},
 
-  "profile": {
-    "title": "Profile",
-    "subtitle": "User profile information",
-    "userId": "User ID",
-    "created": "Created",
-    "updated": "Updated",
-    "noAvatar": "No avatar",
-    "noDisplayName": "No display name"
-  },
+	"profile": {
+		"title": "Profile",
+		"subtitle": "User profile information",
+		"userId": "User ID",
+		"created": "Created",
+		"updated": "Updated",
+		"noAvatar": "No avatar",
+		"noDisplayName": "No display name"
+	},
 
-  "locale": {
-    "switch": "Switch language"
-  },
+	"locale": {
+		"switch": "Switch language"
+	},
 
-  "auth": {
-    "tabs": {
-      "signIn": "Sign In",
-      "signUp": "Create Account"
-    },
-    "title": {
-      "signIn": "Welcome Back",
-      "signUp": "Get Started"
-    },
-    "subtitle": {
-      "signIn": "Enter your details to access your decks.",
-      "signUp": "Create your account to start learning."
-    },
-    "hero": {
-      "tagline": "Flashcards, made simple",
-      "headline": {
-        "line1": "Master your knowledge",
-        "line2": "one card at a time."
-      },
-      "description": "Build habits, track progress, and retain information longer with our optimized spaced repetition system.",
-      "features": [
-        {
-          "title": "Create",
-          "description": "Custom Decks"
-        },
-        {
-          "title": "Review",
-          "description": "Daily Focus"
-        },
-        {
-          "title": "Track",
-          "description": "Smart Stats"
-        }
-      ]
-    },
-    "consent": "By continuing, you agree to our {terms} and {privacy}.",
-    "providers": {
-      "github": "GitHub",
-      "facebook": "Facebook",
-      "google": "Google",
-      "orEmail": "Or Email"
-    },
-    "fields": {
-      "displayName": "Display name",
-      "displayNamePlaceholder": "John Doe",
-      "email": "Email address",
-      "emailPlaceholder": "you@example.com",
-      "password": "Password"
-    },
-    "signIn": {
-      "passwordPlaceholder": "Enter your password",
-      "rememberMe": "Remember me",
-      "forgotPassword": "Forgot password?",
-      "submit": "Sign In"
-    },
-    "signUp": {
-      "passwordPlaceholder": "Create a password (min 8 chars)",
-      "submit": "Create Account"
-    },
-    "validation": {
-      "invalidEmail": "Invalid email",
-      "nameMax": "Name is too long",
-      "nameMin": "Name is too short",
-      "passwordRequired": "Password is required",
-      "passwordRules": "Min 8 chars, include upper, lower, number, and special."
-    }
-  },
+	"auth": {
+		"tabs": {
+			"signIn": "Sign In",
+			"signUp": "Create Account"
+		},
+		"title": {
+			"signIn": "Welcome Back",
+			"signUp": "Get Started"
+		},
+		"subtitle": {
+			"signIn": "Enter your details to access your decks.",
+			"signUp": "Create your account to start learning."
+		},
+		"hero": {
+			"tagline": "Flashcards, made simple",
+			"headline": {
+				"line1": "Master your knowledge",
+				"line2": "one card at a time."
+			},
+			"description": "Build habits, track progress, and retain information longer with our optimized spaced repetition system.",
+			"features": [
+				{
+					"title": "Create",
+					"description": "Custom Decks"
+				},
+				{
+					"title": "Review",
+					"description": "Daily Focus"
+				},
+				{
+					"title": "Track",
+					"description": "Smart Stats"
+				}
+			]
+		},
+		"consent": "By continuing, you agree to our {terms} and {privacy}.",
+		"providers": {
+			"github": "GitHub",
+			"facebook": "Facebook",
+			"google": "Google",
+			"orEmail": "Or Email"
+		},
+		"fields": {
+			"displayName": "Display name",
+			"displayNamePlaceholder": "John Doe",
+			"email": "Email address",
+			"emailPlaceholder": "you@example.com",
+			"password": "Password"
+		},
+		"signIn": {
+			"passwordPlaceholder": "Enter your password",
+			"rememberMe": "Remember me",
+			"forgotPassword": "Forgot password?",
+			"submit": "Sign In"
+		},
+		"signUp": {
+			"passwordPlaceholder": "Create a password (min 8 chars)",
+			"submit": "Create Account"
+		},
+		"validation": {
+			"invalidEmail": "Invalid email",
+			"nameMax": "Name is too long",
+			"nameMin": "Name is too short",
+			"passwordRequired": "Password is required",
+			"passwordRules": "Min 8 chars, include upper, lower, number, and special."
+		}
+	},
 
-  "deckPicker": {
-    "signInRequired": "Please sign in",
-    "loading": "Loading decks...",
-    "empty": "No decks yet",
-    "placeholder": "Select a deck"
-  },
+	"deckPicker": {
+		"signInRequired": "Please sign in",
+		"loading": "Loading decks...",
+		"empty": "No decks yet",
+		"placeholder": "Select a deck"
+	},
 
-  "cardForm": {
-    "title": {
-      "create": "Create card",
-      "edit": "Edit card"
-    },
-    "subtitle": {
-      "create": "Add a new card to a deck.",
-      "edit": "Update the deck or content of this card."
-    },
-    "fields": {
-      "deck": "Deck",
-      "front": "Front",
-      "back": "Back"
-    },
-    "errors": {
-      "save": "Failed to save card"
-    },
-    "actions": {
-      "create": "Create",
-      "saveChanges": "Save changes"
-    },
-    "validation": {
-      "backRequired": "Back is required.",
-      "deckRequired": "Please select a deck.",
-      "frontRequired": "Front is required."
-    }
-  },
+	"cardForm": {
+		"title": {
+			"create": "Create card",
+			"edit": "Edit card"
+		},
+		"subtitle": {
+			"create": "Add a new card to a deck.",
+			"edit": "Update the deck or content of this card."
+		},
+		"fields": {
+			"deck": "Deck",
+			"front": "Front",
+			"back": "Back"
+		},
+		"errors": {
+			"save": "Failed to save card"
+		},
+		"actions": {
+			"create": "Create",
+			"saveChanges": "Save changes"
+		},
+		"validation": {
+			"backRequired": "Back is required.",
+			"deckRequired": "Please select a deck.",
+			"frontRequired": "Front is required."
+		}
+	},
 
-  "deckForm": {
-    "title": {
-      "create": "Create a deck",
-      "edit": "Edit deck"
-    },
-    "subtitle": {
-      "create": "Write like a blog: borderless title + live markdown description.",
-      "edit": "Editing deck: {deckId}"
-    },
-    "actions": {
-      "reset": "Reset",
-      "save": "Save",
-      "loading": "Loading deck..."
-    },
-    "errors": {
-      "load": "Failed to load deck",
-      "save": "Save failed"
-    },
-    "fields": {
-      "title": {
-        "label": "Title",
-        "placeholder": "Type your title…"
-      },
-      "color": {
-        "label": "Color",
-        "choose": "Choose",
-        "presets": "Presets",
-        "custom": "Custom",
-        "placeholder": "#3b82f6",
-        "pickerAria": "Pick color"
-      },
-      "tags": {
-        "label": "Tags",
-        "empty": "No tags yet.",
-        "placeholder": "Type a tag and press Enter",
-        "add": "Add",
-        "remove": "Remove {tag}"
-      },
-      "description": {
-        "label": "Description (Markdown)",
-        "placeholder": "Enter description..."
-      }
-    },
-    "validation": {
-      "color": "Invalid color",
-      "descriptionMax": "Description is too long",
-      "tagMax": "Tag is too long",
-      "titleMax": "Title is too long",
-      "titleRequired": "Title is required"
-    }
-  },
+	"deckForm": {
+		"title": {
+			"create": "Create a deck",
+			"edit": "Edit deck"
+		},
+		"subtitle": {
+			"create": "Write like a blog: borderless title + live markdown description.",
+			"edit": "Editing deck: {deckId}"
+		},
+		"actions": {
+			"reset": "Reset",
+			"save": "Save",
+			"loading": "Loading deck..."
+		},
+		"errors": {
+			"load": "Failed to load deck",
+			"save": "Save failed"
+		},
+		"fields": {
+			"title": {
+				"label": "Title",
+				"placeholder": "Type your title…"
+			},
+			"color": {
+				"label": "Color",
+				"choose": "Choose",
+				"presets": "Presets",
+				"custom": "Custom",
+				"placeholder": "#3b82f6",
+				"pickerAria": "Pick color"
+			},
+			"tags": {
+				"label": "Tags",
+				"empty": "No tags yet.",
+				"placeholder": "Type a tag and press Enter",
+				"add": "Add",
+				"remove": "Remove {tag}"
+			},
+			"description": {
+				"label": "Description (Markdown)",
+				"placeholder": "Enter description..."
+			}
+		},
+		"validation": {
+			"color": "Invalid color",
+			"descriptionMax": "Description is too long",
+			"tagMax": "Tag is too long",
+			"titleMax": "Title is too long",
+			"titleRequired": "Title is required"
+		}
+	},
 
-  "decks": {
-    "list": {
-      "loadError": "Failed to load decks",
-      "loading": "Loading decks...",
-      "emptyTitle": "No decks found",
-      "emptyDescription": "Try adjusting your search or create a new deck."
-    },
-    "item": {
-      "cards": "{count} cards",
-      "due": "{count} due",
-      "mastery": "Mastery",
-      "study": "Study Now"
-    }
-  },
+	"decks": {
+		"list": {
+			"loadError": "Failed to load decks",
+			"loading": "Loading decks...",
+			"emptyTitle": "No decks found",
+			"emptyDescription": "Try adjusting your search or create a new deck."
+		},
+		"item": {
+			"cards": "{count} cards",
+			"due": "{count} due",
+			"mastery": "Mastery",
+			"study": "Study Now"
+		}
+	},
 
-  "deckDetail": {
-    "loading": "Loading deck...",
-    "notFound": "Deck not found!",
-    "error": "Error when loading deck",
-    "description": {
-      "title": "Description",
-      "empty": "No description provided."
-    },
-    "cards": {
-      "loadError": "Failed to load cards",
-      "loading": "Loading cards...",
-      "emptyTitle": "No cards yet",
-      "emptyDescription": "Add your first card to start studying.",
-      "create": "Create card"
-    },
-    "actions": {
-      "back": "Back",
-      "study": "Study"
-    }
-  },
+	"deckDetail": {
+		"loading": "Loading deck...",
+		"notFound": "Deck not found!",
+		"error": "Error when loading deck",
+		"description": {
+			"title": "Description",
+			"empty": "No description provided."
+		},
+		"cards": {
+			"loadError": "Failed to load cards",
+			"loading": "Loading cards...",
+			"emptyTitle": "No cards yet",
+			"emptyDescription": "Add your first card to start studying.",
+			"create": "Create card"
+		},
+		"actions": {
+			"back": "Back",
+			"study": "Study"
+		}
+	},
 
-  "study": {
-    "errors": {
-      "load": "Failed to load study",
-      "notFound": "Deck not found"
-    },
-    "finish": {
-      "title": "Great work",
-      "subtitle": "Study finished",
-      "reviewed": "You reviewed {count} cards.",
-      "studyAgain": "Study again",
-      "backToDeck": "Back to deck"
-    },
-    "progress": {
-      "card": "Card {current} of {total}"
-    },
-    "empty": {
-      "description": "No cards to study in this deck yet.",
-      "create": "Create card"
-    },
-    "card": {
-      "front": "Front",
-      "back": "Back",
-      "hidden": "Answer is hidden",
-      "show": "Show answer",
-      "ratings": {
-        "again": "Again",
-        "hard": "Hard",
-        "good": "Good",
-        "easy": "Easy"
-      }
-    }
-  },
+	"cards": {
+		"states": {
+			"new": "New",
+			"learning": "Learning",
+			"review": "Review",
+			"relearning": "Relearning"
+		},
+		"menuHint": "Click menu to edit",
+		"notAvailable": "N/A"
+	},
 
-  "cards": {
-    "states": {
-      "new": "New",
-      "learning": "Learning",
-      "review": "Review",
-      "relearning": "Relearning"
-    },
-    "menuHint": "Click menu to edit",
-    "notAvailable": "N/A"
-  },
-
-  "legal": {
-    "header": {
-      "subtitle": "Legal & Privacy",
-      "home": "Back to Home"
-    },
-    "footer": {
-      "privacy": "Privacy",
-      "terms": "Terms",
-      "deletion": "Data Deletion"
-    },
-    "common": {
-      "lastUpdated": "Last updated: {date}"
-    },
-    "privacy": {
-      "title": "Privacy Policy",
-      "intro": "This Privacy Policy explains how hnfc collects, uses, and protects your information when you use our application.",
-      "sections": [
-        {
-          "title": "Overview",
-          "body": "hnfc is a learning application that helps users create and study decks and cards. We only collect the minimum necessary data to provide authentication and core features."
-        },
-        {
-          "title": "Information We Collect",
-          "body": "Depending on your sign-in method (Email & Password or third-party providers such as Google, Facebook, GitHub), we may collect:",
-          "list": [
-            "Display name",
-            "Email address",
-            "Profile photo URL (if available)",
-            "Basic account identifiers (user ID)"
-          ]
-        },
-        {
-          "title": "Learning Data You Create",
-          "body": "When you use hnfc, you may create learning content. This data may include:",
-          "list": [
-            "Decks (title, description, color, tags)",
-            "Cards/notes and study progress",
-            "Scheduling metadata used for learning/review"
-          ]
-        },
-        {
-          "title": "How We Use Your Information",
-          "list": [
-            "Authenticate and manage your account",
-            "Provide core features (create/edit study content)",
-            "Save your study progress and preferences",
-            "Maintain security and prevent abuse"
-          ]
-        },
-        {
-          "title": "Data Sharing",
-          "body": "We do not sell your personal information. We do not share personal data with third parties except:",
-          "list": [
-            "When required by law or legal process",
-            "With service providers strictly necessary to operate the app (e.g., Firebase for authentication and data storage)"
-          ]
-        },
-        {
-          "title": "Data Storage & Security",
-          "body": "We store data using Firebase services. We apply access control so that only the authenticated owner can access their own content. While no system is 100% secure, we take reasonable steps to protect your data."
-        },
-        {
-          "title": "Your Rights & Choices",
-          "body": "You can update your profile information from the Settings page. You may also request deletion of your account and data at any time."
-        }
-      ],
-      "cta": {
-        "requestDeletion": "Request Data Deletion",
-        "goSettings": "Go to Settings"
-      },
-      "contact": {
-        "title": "Contact",
-        "intro": "If you have any questions about this Privacy Policy, contact:",
-        "emailLabel": "Email"
-      },
-      "links": {
-        "home": "Home",
-        "deletion": "Data Deletion"
-      }
-    },
-    "terms": {
-      "title": "Terms of Service",
-      "intro": "Please read these terms carefully before using hnfc.",
-      "sections": [
-        {
-          "title": "1. Acceptance of Terms",
-          "body": "By accessing or using hnfc, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application."
-        },
-        {
-          "title": "2. Description of the Service",
-          "body": "hnfc is a learning application that allows users to create, manage, and study decks, notes, and cards. The service is currently in an experimental phase, and features may change over time."
-        },
-        {
-          "title": "3. User Accounts",
-          "body": "You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account. You agree to provide accurate and complete information when creating an account."
-        },
-        {
-          "title": "4. User Content",
-          "body": "You retain ownership of the content you create within hnfc, including decks, notes, and cards. By using the service, you grant hnfc permission to store and process this content solely for the purpose of providing the service."
-        },
-        {
-          "title": "5. Acceptable Use",
-          "body": "You agree not to misuse the service, including but not limited to:",
-          "list": [
-            "Attempting to gain unauthorized access to the system",
-            "Uploading malicious or harmful content",
-            "Disrupting or interfering with the service"
-          ]
-        },
-        {
-          "title": "6. Termination",
-          "body": "We reserve the right to suspend or terminate your access to the service at any time if you violate these Terms. You may also request deletion of your account at any time."
-        },
-        {
-          "title": "7. Disclaimer",
-          "body": "The service is provided on an \"as is\" and \"as available\" basis. hnfc makes no warranties regarding the reliability, availability, or accuracy of the service."
-        },
-        {
-          "title": "8. Limitation of Liability",
-          "body": "To the maximum extent permitted by law, hnfc shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service."
-        },
-        {
-          "title": "9. Changes to These Terms",
-          "body": "We may update these Terms from time to time. Continued use of the service after changes become effective constitutes acceptance of the updated Terms."
-        },
-        {
-          "title": "10. Contact",
-          "body": "If you have any questions about these Terms, please contact:",
-          "emailLabel": "Email"
-        }
-      ],
-      "cta": {
-        "deleteAccount": "Request Account Deletion",
-        "viewPrivacy": "View Privacy Policy",
-        "home": "Home",
-        "deletion": "Data Deletion"
-      }
-    },
-    "deletion": {
-      "title": "User Data Deletion",
-      "intro": "Request permanent deletion of your account and associated data.",
-      "options": {
-        "title": "Deletion Request Options",
-        "description": "You can request account and data deletion using one of the options below.",
-        "email": {
-          "title": "Option 1: Email",
-          "description": "Send an email with your sign-in email address.",
-          "to": "To",
-          "subject": "Subject",
-          "cta": "Send Email Request",
-          "subjectText": "User Data Deletion Request"
-        },
-        "inApp": {
-          "title": "Option 2: In-app",
-          "description": "If available, you can also request deletion from your Settings page.",
-          "cta": "Go to Settings",
-          "note": "Note: If you cannot access the app, please use Option 1 (Email)."
-        }
-      },
-      "data": {
-        "title": "Data That Will Be Deleted",
-        "items": [
-          "Your user profile and account metadata",
-          "Decks, cards/notes, and study progress",
-          "Any related content stored in the application"
-        ]
-      },
-      "verification": {
-        "title": "Verification & Processing Time",
-        "body": "For security, we may ask you to verify ownership of the account. Requests are processed within <strong>7 business days</strong>."
-      },
-      "links": {
-        "title": "Related Links",
-        "privacy": "View Privacy Policy",
-        "home": "Back to Home"
-      },
-      "notice": "This page is provided to comply with Facebook (Meta) data protection requirements."
-    }
-  }
+	"legal": {
+		"header": {
+			"subtitle": "Legal & Privacy",
+			"home": "Back to Home"
+		},
+		"footer": {
+			"privacy": "Privacy",
+			"terms": "Terms",
+			"deletion": "Data Deletion"
+		},
+		"common": {
+			"lastUpdated": "Last updated: {date}"
+		},
+		"privacy": {
+			"title": "Privacy Policy",
+			"intro": "This Privacy Policy explains how hnfc collects, uses, and protects your information when you use our application.",
+			"sections": [
+				{
+					"title": "Overview",
+					"body": "hnfc is a learning application that helps users create and study decks and cards. We only collect the minimum necessary data to provide authentication and core features."
+				},
+				{
+					"title": "Information We Collect",
+					"body": "Depending on your sign-in method (Email & Password or third-party providers such as Google, Facebook, GitHub), we may collect:",
+					"list": [
+						"Display name",
+						"Email address",
+						"Profile photo URL (if available)",
+						"Basic account identifiers (user ID)"
+					]
+				},
+				{
+					"title": "Learning Data You Create",
+					"body": "When you use hnfc, you may create learning content. This data may include:",
+					"list": [
+						"Decks (title, description, color, tags)",
+						"Cards/notes and study progress",
+						"Scheduling metadata used for learning/review"
+					]
+				},
+				{
+					"title": "How We Use Your Information",
+					"list": [
+						"Authenticate and manage your account",
+						"Provide core features (create/edit study content)",
+						"Save your study progress and preferences",
+						"Maintain security and prevent abuse"
+					]
+				},
+				{
+					"title": "Data Sharing",
+					"body": "We do not sell your personal information. We do not share personal data with third parties except:",
+					"list": [
+						"When required by law or legal process",
+						"With service providers strictly necessary to operate the app (e.g., Firebase for authentication and data storage)"
+					]
+				},
+				{
+					"title": "Data Storage & Security",
+					"body": "We store data using Firebase services. We apply access control so that only the authenticated owner can access their own content. While no system is 100% secure, we take reasonable steps to protect your data."
+				},
+				{
+					"title": "Your Rights & Choices",
+					"body": "You can update your profile information from the Settings page. You may also request deletion of your account and data at any time."
+				}
+			],
+			"cta": {
+				"requestDeletion": "Request Data Deletion",
+				"goSettings": "Go to Settings"
+			},
+			"contact": {
+				"title": "Contact",
+				"intro": "If you have any questions about this Privacy Policy, contact:",
+				"emailLabel": "Email"
+			},
+			"links": {
+				"home": "Home",
+				"deletion": "Data Deletion"
+			}
+		},
+		"terms": {
+			"title": "Terms of Service",
+			"intro": "Please read these terms carefully before using hnfc.",
+			"sections": [
+				{
+					"title": "1. Acceptance of Terms",
+					"body": "By accessing or using hnfc, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application."
+				},
+				{
+					"title": "2. Description of the Service",
+					"body": "hnfc is a learning application that allows users to create, manage, and study decks, notes, and cards. The service is currently in an experimental phase, and features may change over time."
+				},
+				{
+					"title": "3. User Accounts",
+					"body": "You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account. You agree to provide accurate and complete information when creating an account."
+				},
+				{
+					"title": "4. User Content",
+					"body": "You retain ownership of the content you create within hnfc, including decks, notes, and cards. By using the service, you grant hnfc permission to store and process this content solely for the purpose of providing the service."
+				},
+				{
+					"title": "5. Acceptable Use",
+					"body": "You agree not to misuse the service, including but not limited to:",
+					"list": [
+						"Attempting to gain unauthorized access to the system",
+						"Uploading malicious or harmful content",
+						"Disrupting or interfering with the service"
+					]
+				},
+				{
+					"title": "6. Termination",
+					"body": "We reserve the right to suspend or terminate your access to the service at any time if you violate these Terms. You may also request deletion of your account at any time."
+				},
+				{
+					"title": "7. Disclaimer",
+					"body": "The service is provided on an \"as is\" and \"as available\" basis. hnfc makes no warranties regarding the reliability, availability, or accuracy of the service."
+				},
+				{
+					"title": "8. Limitation of Liability",
+					"body": "To the maximum extent permitted by law, hnfc shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service."
+				},
+				{
+					"title": "9. Changes to These Terms",
+					"body": "We may update these Terms from time to time. Continued use of the service after changes become effective constitutes acceptance of the updated Terms."
+				},
+				{
+					"title": "10. Contact",
+					"body": "If you have any questions about these Terms, please contact:",
+					"emailLabel": "Email"
+				}
+			],
+			"cta": {
+				"deleteAccount": "Request Account Deletion",
+				"viewPrivacy": "View Privacy Policy",
+				"home": "Home",
+				"deletion": "Data Deletion"
+			}
+		},
+		"deletion": {
+			"title": "User Data Deletion",
+			"intro": "Request permanent deletion of your account and associated data.",
+			"options": {
+				"title": "Deletion Request Options",
+				"description": "You can request account and data deletion using one of the options below.",
+				"email": {
+					"title": "Option 1: Email",
+					"description": "Send an email with your sign-in email address.",
+					"to": "To",
+					"subject": "Subject",
+					"cta": "Send Email Request",
+					"subjectText": "User Data Deletion Request"
+				},
+				"inApp": {
+					"title": "Option 2: In-app",
+					"description": "If available, you can also request deletion from your Settings page.",
+					"cta": "Go to Settings",
+					"note": "Note: If you cannot access the app, please use Option 1 (Email)."
+				}
+			},
+			"data": {
+				"title": "Data That Will Be Deleted",
+				"items": [
+					"Your user profile and account metadata",
+					"Decks, cards/notes, and study progress",
+					"Any related content stored in the application"
+				]
+			},
+			"verification": {
+				"title": "Verification & Processing Time",
+				"body": "For security, we may ask you to verify ownership of the account. Requests are processed within <strong>7 business days</strong>."
+			},
+			"links": {
+				"title": "Related Links",
+				"privacy": "View Privacy Policy",
+				"home": "Back to Home"
+			},
+			"notice": "This page is provided to comply with Facebook (Meta) data protection requirements."
+		}
+	}
 }

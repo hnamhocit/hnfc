@@ -34,8 +34,8 @@ export default function CardForm({ cardId }: Props) {
   const [saving, setSaving] = useState(false);
   const [topError, setTopError] = useState("");
 
-  const cardErrorMap: ZodErrorMap = (issue, ctx) => {
-    const field = issue.path[0];
+  const cardErrorMap: ZodErrorMap = (issue) => {
+    const field = issue.path?.[0];
     if (issue.code === "too_small") {
       if (field === "deckId")
         return { message: tCardForm("validation.deckRequired") };
@@ -45,11 +45,11 @@ export default function CardForm({ cardId }: Props) {
         return { message: tCardForm("validation.backRequired") };
     }
 
-    return { message: ctx.defaultError };
+    return { message: issue.message ?? "Invalid value" };
   };
 
   const form = useForm<CardValues>({
-    resolver: zodResolver(cardSchema, { errorMap: cardErrorMap }),
+    resolver: zodResolver(cardSchema, { error: cardErrorMap }),
     defaultValues: {
       deckId: "",
       front: "",

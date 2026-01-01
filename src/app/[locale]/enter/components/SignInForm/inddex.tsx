@@ -24,8 +24,8 @@ export default function SignInForm({ disabled, setDisabled }: SignInFormProps) {
   const tSignIn = useTranslations("auth.signIn");
   const tValidation = useTranslations("auth.validation");
 
-  const loginErrorMap: ZodErrorMap = (issue, ctx) => {
-    const field = issue.path[0];
+  const loginErrorMap: ZodErrorMap = (issue) => {
+    const field = issue.path?.[0];
     if (field === "email")
       return {
         message: tValidation("invalidEmail"),
@@ -35,11 +35,11 @@ export default function SignInForm({ disabled, setDisabled }: SignInFormProps) {
       if (issue.code === "too_small")
         return { message: tValidation("passwordRequired") };
 
-      if (issue.code === "invalid_string" && issue.validation === "regex")
+      if (issue.code === "invalid_format" && issue.format === "regex")
         return { message: tValidation("passwordRules") };
     }
 
-    return { message: ctx.defaultError };
+    return { message: issue.message ?? "Invalid value" };
   };
 
   const {
@@ -48,7 +48,7 @@ export default function SignInForm({ disabled, setDisabled }: SignInFormProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginInput>({
-    resolver: zodResolver(loginSchema, { errorMap: loginErrorMap }),
+    resolver: zodResolver(loginSchema, { error: loginErrorMap }),
     defaultValues: {
       email: "",
       password: "",
